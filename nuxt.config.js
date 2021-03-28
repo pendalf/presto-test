@@ -41,6 +41,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-font-loader',
     'nuxt-trailingslash-module',
     'nuxt-webfontloader',
     '@nuxtjs/style-resources',
@@ -208,13 +209,13 @@ export default {
     },
   },
 
-  webfontloader: {
-    events: false,
-    google: {
-      families: ['Montserrat:400,500,600:cyrillic&display=swap'],
-    },
-    timeout: 5000,
-  },
+  // webfontloader: {
+  //   events: false,
+  //   google: {
+  //     families: ['Montserrat:400,500,600:cyrillic&display=swap'],
+  //   },
+  //   timeout: 5000,
+  // },
   styleResources: {
     // your settings here
     scss: ['./assets/scss/global-variables.scss'], // alternative: scss
@@ -226,4 +227,7 @@ export default {
       host: '0.0.0.0',
     },
   }),
+  fontLoader: {
+    url: '/fonts/GTEestiPro/GTEestiPro.css',
+  },
 }
