@@ -1,7 +1,7 @@
 @mixin globalWrapper {
-    max-width: 1280px;
+    max-width: 1920px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 rem(127);
 }
 
 @function rem($size) {

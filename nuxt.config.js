@@ -147,7 +147,9 @@ export default {
         {
           loader: 'vue-svg-loader',
           options: {
-            svgo: false,
+            plugins: [
+              { prefixIds: false }, // Disables prefixing for SVG IDs
+            ],
           },
         },
       ]
@@ -189,28 +191,28 @@ export default {
         }
       })
       //  Create the custom SVG rule
-      const svgRule = {
-        test: /\.svg$/,
-        oneOf: [
-          {
-            resourceQuery: /inline/,
-            use: vueSvgLoader,
-          },
-          {
-            resourceQuery: /data/,
-            loader: 'url-loader',
-          },
-          {
-            resourceQuery: /raw/,
-            loader: 'raw-loader',
-          },
-          {
-            loader: 'file-loader', // By default, always use file-loader
-          },
-        ],
-      }
+      // const svgRule = {
+      //   test: /\.svg$/,
+      //   oneOf: [
+      //     {
+      //       resourceQuery: /inline/,
+      //       use: vueSvgLoader,
+      //     },
+      //     {
+      //       resourceQuery: /data/,
+      //       loader: 'url-loader',
+      //     },
+      //     {
+      //       resourceQuery: /raw/,
+      //       loader: 'raw-loader',
+      //     },
+      //     {
+      //       loader: 'file-loader', // By default, always use file-loader
+      //     },
+      //   ],
+      // }
 
-      config.module.rules.push(svgRule) // Actually add the rule
+      // config.module.rules.push(svgRule) // Actually add the rule
     },
   },
   render: {
