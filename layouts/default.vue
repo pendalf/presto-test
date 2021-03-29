@@ -45,6 +45,7 @@ export default {
 body {
   color: $main-text-color;
   font-family: $main-font-family;
+  background: $basic-bg-color;
 }
 a {
   color: $main-link-color;
