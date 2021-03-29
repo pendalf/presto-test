@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <ImportantPoints :items="importantPoints" :options="slickOptions" />
+    <BusinessProposals :items="BusinessProposals" />
 
     <SlickCarousel v-if="events" :options="slickOptions">
       <EventItem
@@ -15,28 +16,28 @@
 <script>
 import EventItem from '~/components/event/EventItem'
 import ImportantPoints from '~/components/ImportantPoints/ImportantPoints'
+import BusinessProposals from '~/components/BusinessProposals/BusinessProposals'
 import SlickCarousel from '~/components/SlickCarousel'
 
 export default {
   components: {
     EventItem,
     ImportantPoints,
+    BusinessProposals,
     SlickCarousel,
   },
   async asyncData({ app, route, params, error, store, $axios }) {
     try {
-      // const { data } = await $axios.get(
-      //   'https://seller-events-api-desc.herokuapp.com/api/events'
-      // )
-      // const importantPoints = await $axios.get('/mock/importantPoints.json')
-      // console.log(importantPoints)
-
-      // return { events: data }
-      const [events, importantPoints] = await Promise.all([
+      const [events, importantPoints, BusinessProposals] = await Promise.all([
         $axios.get('https://seller-events-api-desc.herokuapp.com/api/events'),
         $axios.get('/mock/importantPoints.json'),
+        $axios.get('/mock/BusinessProposals.json'),
       ])
-      return { events: events.data, importantPoints: importantPoints.data }
+      return {
+        events: events.data,
+        importantPoints: importantPoints.data,
+        BusinessProposals: BusinessProposals.data,
+      }
     } catch (err) {
       console.log(err)
       return error({
