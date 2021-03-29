@@ -2,6 +2,23 @@ const imageminMozjpeg = require('imagemin-mozjpeg')
 const ImageminPlugin = require('imagemin-webpack-plugin').default
 const isDev = process.env.NODE_ENV !== 'production'
 
+const logOptions = {
+  // optional : defaults to true if not specified
+  isEnabled: true,
+  // required ['debug', 'info', 'warn', 'error', 'fatal']
+  logLevel: 'debug',
+  // optional : defaults to false if not specified
+  stringifyArguments: false,
+  // optional : defaults to false if not specified
+  showLogLevel: false,
+  // optional : defaults to false if not specified
+  showMethodName: false,
+  // optional : defaults to '|' if not specified
+  separator: '|',
+  // optional : defaults to false if not specified
+  showConsoleColors: false,
+}
+
 export default {
   ...(!isDev && {
     modern: 'client',
@@ -45,6 +62,7 @@ export default {
     'nuxt-trailingslash-module',
     'nuxt-webfontloader',
     '@nuxtjs/style-resources',
+    ['nuxt-log', logOptions],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

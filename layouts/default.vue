@@ -1,9 +1,17 @@
 <template>
-  <nuxt />
+  <div class="super">
+    <Header />
+    <nuxt />
+  </div>
 </template>
 
 <script>
+import Header from '~/components/layout/Header.vue'
+
 export default {
+  components: {
+    Header,
+  },
   head() {
     const canonical = `https://mysite.com${this.$route.path
       .toLowerCase()
@@ -32,3 +40,21 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+body {
+  color: $main-text-color;
+  font-family: $main-font-family;
+}
+a {
+  color: $main-link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.super {
+  overflow: hidden;
+}
+</style>

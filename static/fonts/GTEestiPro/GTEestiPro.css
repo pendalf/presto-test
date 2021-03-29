@@ -21,3 +21,12 @@
     font-display: swap;
     src: url('/fonts/GTEestiPro/GTEestiProDisplay-Medium.woff2') format('woff2');
 }
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('/fonts/icomoon/icomoon.eot?nqcm5m');
+    src: url('/fonts/icomoon/icomoon.eot?nqcm5m#iefix') format('embedded-opentype'), url('/fonts/icomoon/icomoon.ttf?nqcm5m') format('truetype'), url('/fonts/icomoon/icomoon.woff?nqcm5m') format('woff'), url('/fonts/icomoon/icomoon.svg?nqcm5m#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
