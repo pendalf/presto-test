@@ -46,7 +46,7 @@ export default {
         icons: [
           {
             picUrl: '/img/telegram-pic.png',
-            link: '/',
+            link: 'https://seller-events-api-desc.herokuapp.com/api/articles',
             title: 'Telegram',
           },
           {

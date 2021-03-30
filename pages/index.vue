@@ -4,6 +4,7 @@
     <BusinessProposals :items="BusinessProposals" />
     <EventItems :items="events" :options="slickOptions" />
     <MarketplaceNews :items="news" :options="slickOptions" />
+    <articles :items="articles" :options="slickOptions" />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import EventItems from '~/components/EventItems/EventItems'
 import ImportantPoints from '~/components/ImportantPoints/ImportantPoints'
 import BusinessProposals from '~/components/BusinessProposals/BusinessProposals'
 import MarketplaceNews from '~/components/MarketplaceNews/MarketplaceNews'
+import articles from '~/components/articles/articles'
 
 export default {
   components: {
@@ -19,6 +21,7 @@ export default {
     ImportantPoints,
     BusinessProposals,
     MarketplaceNews,
+    articles,
   },
   async asyncData({ app, route, params, error, store, $axios }) {
     try {
@@ -27,17 +30,20 @@ export default {
         importantPoints,
         BusinessProposals,
         news,
+        articles,
       ] = await Promise.all([
         $axios.get('https://seller-events-api-desc.herokuapp.com/api/events'),
         $axios.get('/mock/importantPoints.json'),
         $axios.get('/mock/BusinessProposals.json'),
         $axios.get('https://seller-events-api-desc.herokuapp.com/api/news'),
+        $axios.get('https://seller-events-api-desc.herokuapp.com/api/articles'),
       ])
       return {
         events: events.data,
         importantPoints: importantPoints.data,
         BusinessProposals: BusinessProposals.data,
         news: news.data,
+        articles: articles.data,
       }
     } catch (err) {
       console.log(err)
