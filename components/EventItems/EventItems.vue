@@ -49,6 +49,7 @@ export default {
   margin-bottom: rem(16);
   .slick-carousel {
     margin-bottom: rem(36);
+    width: rem(260);
   }
 }
 </style>

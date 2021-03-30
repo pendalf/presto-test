@@ -1,5 +1,5 @@
 <template>
-  <AppSection :title="'Новости маркетплейса'" :section-suffix="'event-items'">
+  <AppSection :title="'Новости маркетплейса'" :section-suffix="'news-items'">
     <SlickCarousel v-if="itemsAddFirsItem.length" :options="options">
       <MarketplaceNewsItem
         v-for="(item, index) in itemsAddFirsItem"
@@ -64,7 +64,7 @@ export default {
 </script>
 
 <style lang="scss">
-.section--event-items {
+.section--news-items {
   margin-bottom: rem(18);
   .slick-carousel {
     margin-left: rem(-24);
