@@ -2,29 +2,20 @@
   <div class="container">
     <ImportantPoints :items="importantPoints" :options="slickOptions" />
     <BusinessProposals :items="BusinessProposals" />
-
-    <SlickCarousel v-if="events" :options="slickOptions">
-      <EventItem
-        v-for="(event, index) in events"
-        :key="index"
-        :event="event"
-      ></EventItem>
-    </SlickCarousel>
+    <EventItems :items="events" :options="slickOptions" />
   </div>
 </template>
 
 <script>
-import EventItem from '~/components/event/EventItem'
+import EventItems from '~/components/EventItems/EventItems'
 import ImportantPoints from '~/components/ImportantPoints/ImportantPoints'
 import BusinessProposals from '~/components/BusinessProposals/BusinessProposals'
-import SlickCarousel from '~/components/SlickCarousel'
 
 export default {
   components: {
-    EventItem,
+    EventItems,
     ImportantPoints,
     BusinessProposals,
-    SlickCarousel,
   },
   async asyncData({ app, route, params, error, store, $axios }) {
     try {

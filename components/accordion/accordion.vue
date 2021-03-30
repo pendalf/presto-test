@@ -25,7 +25,7 @@ export default {
 <style lang="scss">
 .accordion {
   list-style: none;
-  margin: 0 rem(16);
+  margin: 0;
   padding: 0;
 
   &__item:last-child {

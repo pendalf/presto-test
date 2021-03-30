@@ -4,6 +4,9 @@
     :class="sectionSuffix ? `section--${sectionSuffix}` : ''"
   >
     <h2 v-if="title" class="section__title">{{ title }}</h2>
+    <div v-if="isSubtitle" class="section__subtitle">
+      <slot name="section-subtitle" />
+    </div>
     <div class="section__content">
       <slot />
     </div>
@@ -23,7 +26,11 @@ export default {
       default: '',
     },
   },
-  computed: {},
+  computed: {
+    isSubtitle() {
+      return !!this.$slots['section-subtitle']
+    },
+  },
 }
 </script>
 
@@ -35,6 +42,16 @@ export default {
     font-size: rem(24);
     line-height: rem(28);
     letter-spacing: rem(0.6);
+  }
+  &__subtitle {
+    margin: rem(12) rem(16) rem(32);
+    font-weight: 350;
+    font-size: rem(16);
+    line-height: rem(20);
+    letter-spacing: rem(0.4);
+  }
+  &__content {
+    margin: 0 rem(16);
   }
 }
 </style>

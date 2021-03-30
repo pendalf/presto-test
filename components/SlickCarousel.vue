@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <VueSlickCarousel class="slick-carousel" v-bind="settings">
-      <slot />
-    </VueSlickCarousel>
-  </div>
+  <VueSlickCarousel class="slick-carousel" v-bind="settings">
+    <slot />
+  </VueSlickCarousel>
 </template>
 
 <script>
@@ -40,7 +38,8 @@ export default {
 
 <style lang="scss">
 .slick-carousel {
-  //   margin-left: rem(16);
+  margin-left: rem(-16);
+
   width: rem(276);
   .slick-list {
     overflow: visible;
