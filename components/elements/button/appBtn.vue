@@ -47,6 +47,9 @@ export default {
     line-height: rem(20);
     letter-spacing: rem(0.4);
     border-radius: rem(1000);
+    @media only screen and (min-width: 650px) {
+      padding: rem(10) rem(24);
+    }
   }
 
   &--round {
