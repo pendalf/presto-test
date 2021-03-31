@@ -74,6 +74,7 @@ export default {
     @media only screen and (min-width: 650px) {
       width: auto;
       margin-left: rem(-24);
+      margin-bottom: rem(15);
     }
 
     .slick-slide {

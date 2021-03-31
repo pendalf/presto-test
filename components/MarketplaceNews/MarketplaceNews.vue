@@ -1,6 +1,12 @@
 <template>
-  <AppSection :title="'Новости маркетплейса'" :section-suffix="'news-items'">
-    <SlickCarousel v-if="itemsAddFirsItem.length" :options="options">
+  <AppSection :title="'Разбираемся'" :section-suffix="'news-items'">
+    <template slot="section-subtitle">
+      Узнайте, с чего начать из серии коротких обучающих роликов.Познакомьтесь с
+      Личным кабинетом и инструментами для работы на маркетплейсе.Настройте
+      аналитику и научитесь запускать эффективные рекламные кампании.
+    </template>
+    <template slot="section-slider-title">Новости маркетплейса</template>
+    <SlickCarousel v-if="itemsAddFirsItem.length" :options="slickOptions">
       <MarketplaceNewsItem
         v-for="(item, index) in itemsAddFirsItem"
         :key="index"
@@ -37,6 +43,21 @@ export default {
       default: () => {},
     },
   },
+  data() {
+    return {
+      slickOptions: {
+        dots: false,
+        arrows: true,
+        mobileFirst: true,
+        slidesToShow: 3,
+        variableWidth: true,
+        responsive: [
+          { breakpoint: 650, settings: { arrows: false, slidesToShow: 1 } },
+        ],
+      },
+    }
+  },
+
   computed: {
     itemsAddFirsItem() {
       const items = [...this.items]
@@ -73,8 +94,38 @@ export default {
     margin-bottom: rem(32);
     width: rem(220);
 
+    @media only screen and (min-width: 650px) {
+      width: auto;
+      margin-left: rem(-24);
+      margin-top: 0;
+    }
+
     .slick-slide {
       padding: 0 0 0 rem(24);
+    }
+  }
+  .btn--more {
+    @media only screen and (min-width: 650px) {
+      order: -1;
+      margin-bottom: rem(40);
+      align-self: flex-end;
+      margin-right: rem(120);
+      margin-top: rem(-61);
+    }
+  }
+  .slick-slide {
+    &:first-child {
+      .news {
+        &____row {
+          @media only screen and (min-width: 650px) {
+            margin-right: rem(32);
+            margin-left: rem(32);
+          }
+        }
+        &__title {
+          font-size: rem(18);
+        }
+      }
     }
   }
 }

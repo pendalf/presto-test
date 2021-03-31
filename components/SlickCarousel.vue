@@ -76,6 +76,10 @@ export default {
     box-sizing: border-box;
     margin-bottom: rem(16);
 
+    @media only screen and (min-width: 650px) {
+      background: #edf3f9;
+    }
+
     &:before {
       font-family: 'icomoon' !important;
       color: $main-text-color;
