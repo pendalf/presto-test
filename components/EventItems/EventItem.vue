@@ -57,20 +57,37 @@ export default {
     display: flex !important;
     flex-direction: column;
     align-items: flex-start;
-    padding: rem(16) 0px;
+    padding: rem(16) rem(0);
     width: rem(260);
     background: #ffffff;
-    box-shadow: 0px rem(4) rem(24) rgba(0, 26, 52, 0.12);
+    box-shadow: rem(0) rem(4) rem(24) rgba(0, 26, 52, 0.12);
     border-radius: rem(20);
     flex: none;
     order: 0;
     flex-grow: 0;
-    // margin: 0px rem(16);
+    // margin: rem(0) rem(16);
     box-sizing: border-box;
     min-height: rem(396);
+
+    @media only screen and (min-width: 650px) {
+      width: rem(376) !important;
+      padding: rem(32) rem(0);
+      border-radius: rem(20);
+      min-height: rem(480);
+      box-shadow: rem(0) rem(47) rem(304) rgba(0, 26, 52, 0.04),
+        rem(0) rem(30.463) rem(178.037) rgba(0, 26, 52, 0.0303704),
+        rem(0) rem(18.1037) rem(96.8296) rgba(0, 26, 52, 0.0242963),
+        rem(0) rem(9.4) rem(49.4) rgba(0, 26, 52, 0.02),
+        rem(0) rem(3.82963) rem(24.7704) rgba(0, 26, 52, 0.0157037),
+        rem(0) rem(0.87037) rem(11.963) rgba(0, 26, 52, 0.00962963);
+    }
   }
   &__row {
     margin: 0 rem(16);
+
+    @media only screen and (min-width: 650px) {
+      margin: 0 rem(32);
+    }
   }
   &__head {
     display: flex;
@@ -80,16 +97,25 @@ export default {
     box-sizing: border-box;
     align-items: center;
     width: 100%;
+
+    @media only screen and (min-width: 650px) {
+      padding-left: rem(32);
+    }
   }
   &__date {
     font-weight: 350;
     font-size: rem(12);
     line-height: rem(16);
     letter-spacing: rem(0.4);
+
+    @media only screen and (min-width: 650px) {
+      font-size: rem(16);
+      line-height: rem(21);
+    }
   }
   &__level {
     background: #005bff;
-    border-radius: rem(80) 0px 0px rem(80);
+    border-radius: rem(80) rem(0) rem(0) rem(80);
     padding: rem(8) rem(8) rem(8) rem(12);
     font-size: rem(12);
     line-height: rem(16);
@@ -98,6 +124,12 @@ export default {
     text-align: center;
     letter-spacing: rem(0.32);
     color: #ffffff;
+
+    @media only screen and (min-width: 650px) {
+      padding: rem(8) rem(12) rem(9);
+      font-size: rem(14.5);
+      letter-spacing: rem(0.4);
+    }
 
     &.dark {
       background: #000912;
@@ -109,6 +141,12 @@ export default {
     line-height: rem(24);
     letter-spacing: rem(0.6);
     margin-top: rem(16);
+
+    @media only screen and (min-width: 650px) {
+      margin-top: rem(25);
+      font-size: rem(30);
+      line-height: rem(36.5);
+    }
   }
   &__theme {
     font-weight: 500;
@@ -116,11 +154,18 @@ export default {
     line-height: rem(16);
     letter-spacing: rem(0.6);
     margin-top: rem(16);
+    @media only screen and (min-width: 650px) {
+      margin-top: rem(20);
+      font-size: rem(18);
+      line-height: rem(24);
+    }
   }
   &__points {
     padding: 0;
     margin-top: rem(4);
     list-style: none;
+    @media only screen and (min-width: 650px) {
+    }
   }
   &__points-item {
     position: relative;
@@ -130,6 +175,12 @@ export default {
     letter-spacing: rem(0.4);
     margin: rem(12) 0 0 rem(28);
     padding: 0;
+
+    @media only screen and (min-width: 650px) {
+      line-height: rem(16.5);
+      margin: rem(12) 0 0 rem(28);
+      padding-bottom: rem(4);
+    }
 
     i {
       position: absolute;
@@ -144,6 +195,11 @@ export default {
     letter-spacing: rem(0.4);
     padding-top: rem(32);
     margin-top: auto;
+
+    @media only screen and (min-width: 650px) {
+      font-size: rem(18);
+      line-height: rem(20);
+    }
   }
 }
 </style>

@@ -47,6 +47,10 @@ export default {
         padding-left: rem(24);
       }
     }
+    .slick-arrow {
+      margin-bottom: rem(-5);
+      right: rem(16);
+    }
   }
 }
 </style>

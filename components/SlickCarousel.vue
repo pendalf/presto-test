@@ -61,7 +61,7 @@ export default {
   .slick-arrow {
     position: absolute;
     bottom: 100%;
-    right: rem(16);
+    right: 0;
     top: auto;
     left: auto;
     display: flex;
@@ -74,7 +74,7 @@ export default {
     background: #ccd8e4;
     border-radius: rem(100);
     box-sizing: border-box;
-    margin-bottom: rem(-5);
+    margin-bottom: rem(16);
 
     &:before {
       font-family: 'icomoon' !important;

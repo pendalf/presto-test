@@ -65,6 +65,17 @@ export default {
     color: #005bff;
     height: rem(36);
     border-radius: rem(1000);
+
+    @media only screen and (min-width: 650px) {
+      height: rem(48);
+      padding: rem(14) rem(20);
+      background: #edf3f9;
+      font-weight: normal;
+      font-size: rem(16);
+      line-height: rem(21);
+      letter-spacing: rem(0.6);
+      color: $main-text-color;
+    }
   }
   &--white {
     background: #ffffff;

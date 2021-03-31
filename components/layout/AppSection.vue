@@ -113,6 +113,9 @@ export default {
     }
   }
   &__content {
+    display: flex;
+    flex-direction: column;
+
     @extend %inner-margin;
   }
   &__footer {

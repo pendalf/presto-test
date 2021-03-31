@@ -7,7 +7,7 @@
       Узнавайте информацию из первых рук, общайтесь с действующими продавцами,
       будьте в курсе новых инструментов и возможностей маркетплейса.
     </template>
-    <SlickCarousel v-if="items.length" :options="options">
+    <SlickCarousel v-if="items.length" :options="slickOptions">
       <EventItem v-for="(item, index) in items" :key="index" :event="item" />
     </SlickCarousel>
     <appBtn :to="'/'" class="btn--more" type="button"
@@ -40,6 +40,26 @@ export default {
       default: () => {},
     },
   },
+  data() {
+    return {
+      slickOptions: {
+        dots: false,
+        arrows: true,
+        mobileFirst: true,
+        slidesToShow: 2,
+        variableWidth: true,
+        responsive: [
+          {
+            breakpoint: 650,
+            settings: {
+              arrows: false,
+              slidesToShow: 1,
+            },
+          },
+        ],
+      },
+    }
+  },
   computed: {},
 }
 </script>
@@ -50,6 +70,25 @@ export default {
   .slick-carousel {
     margin-bottom: rem(36);
     width: rem(260);
+
+    @media only screen and (min-width: 650px) {
+      width: auto;
+      margin-left: rem(-24);
+    }
+
+    .slick-slide {
+      @media only screen and (min-width: 650px) {
+        padding-left: rem(24);
+      }
+    }
+  }
+
+  .btn--more {
+    @media only screen and (min-width: 650px) {
+      order: -1;
+      margin-bottom: rem(40);
+      align-self: flex-start;
+    }
   }
 }
 </style>
