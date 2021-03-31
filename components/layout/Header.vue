@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header section section--header">
     <div class="top-bar">
       <a href="/" class="logo">
         <img src="~assets/img/logo-mobile.svg" />
@@ -70,7 +70,9 @@ export default {
   height: rem(70);
 }
 .header {
-  @include globalWrapper;
+  //@include globalWrapper;
+  display: flex;
+  flex-direction: column;
   position: relative;
   padding: 0;
   background: url('~assets/img/promo_top.jpg');
@@ -78,6 +80,7 @@ export default {
   background-position: 50% 0;
   border-radius: 0 0 rem(24) rem(24);
   min-height: 100vh;
+  overflow: hidden;
 }
 .logo {
   // width: rem(82);
@@ -93,8 +96,12 @@ export default {
   backdrop-filter: blur(rem(8));
 }
 .promo {
-  margin: rem(176) rem(16) 0;
-  padding-bottom: rem(104);
+  margin: rem(40) rem(16);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+
   &__title {
     font-weight: 500;
     font-size: rem(36);

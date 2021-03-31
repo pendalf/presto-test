@@ -41,26 +41,47 @@ export default {
 </script>
 
 <style lang="scss">
+%inner-margin {
+  margin-left: rem(16);
+  margin-right: rem(16);
+
+  @media only screen and (min-width: 650px) {
+    margin-right: rem(28);
+    margin-left: rem(28);
+  }
+}
 .section {
+  max-width: 320px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 650px) {
+    max-width: 1920px;
+  }
+
   &__title {
-    margin: rem(40) rem(16) 0;
+    margin-top: rem(40);
     font-weight: 500;
     font-size: rem(24);
     line-height: rem(28);
     letter-spacing: rem(0.6);
+
+    @extend %inner-margin;
   }
   &__subtitle {
-    margin: rem(12) rem(16) rem(32);
+    margin-top: rem(12);
+    margin-bottom: rem(32);
     font-weight: 350;
     font-size: rem(16);
     line-height: rem(20);
     letter-spacing: rem(0.4);
+
+    @extend %inner-margin;
   }
   &__content {
-    margin: 0 rem(16);
+    @extend %inner-margin;
   }
   &__footer {
-    margin: 0 rem(16);
+    @extend %inner-margin;
   }
 }
 </style>

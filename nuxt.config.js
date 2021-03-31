@@ -62,7 +62,7 @@ export default {
     'nuxt-trailingslash-module',
     'nuxt-webfontloader',
     '@nuxtjs/style-resources',
-    ['nuxt-log', logOptions],
+    // ['nuxt-log', logOptions],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

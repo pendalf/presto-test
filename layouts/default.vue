@@ -48,6 +48,11 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  @media only screen and (min-width: 650px) {
+    font-size: (16/992) * 100vw;
+  }
+}
 body {
   color: $main-text-color;
   font-family: $main-font-family;
