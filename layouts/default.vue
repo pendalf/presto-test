@@ -3,17 +3,20 @@
     <Header />
     <nuxt />
     <Prefooter />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '~/components/layout/Header'
 import Prefooter from '~/components/layout/Prefooter'
+import Footer from '~/components/layout/Footer'
 
 export default {
   components: {
     Header,
     Prefooter,
+    Footer,
   },
   head() {
     const canonical = `https://mysite.com${this.$route.path

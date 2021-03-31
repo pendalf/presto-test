@@ -48,6 +48,7 @@ export default {
   border-radius: rem(32) rem(32) rem(0) rem(0);
   color: #ffffff;
   padding-bottom: rem(40);
+  margin-top: rem(36);
   display: flex;
   flex-direction: column;
   .section {
