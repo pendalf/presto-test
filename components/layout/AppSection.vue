@@ -76,8 +76,11 @@ export default {
 
     @media only screen and (min-width: 650px) {
       margin-top: rem(66);
-      font-size: rem(30);
-      line-height: rem(36);
+      font-size: rem(46);
+      line-height: rem(48.5);
+      letter-spacing: rem(0.8);
+      max-width: rem(350);
+      margin-bottom: rem(24);
     }
   }
   &__subtitle {
@@ -89,6 +92,11 @@ export default {
     letter-spacing: rem(0.4);
 
     @extend %inner-margin;
+
+    @media only screen and (min-width: 650px) {
+      margin-top: rem(0);
+      max-width: rem(650);
+    }
   }
   &__slider-title {
     font-weight: 500;

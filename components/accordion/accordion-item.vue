@@ -71,6 +71,10 @@ export default {
 
   margin-top: rem(32);
 
+  @media only screen and (min-width: 650px) {
+    margin-top: rem(40);
+  }
+
   h3 {
     font-weight: 500;
     font-size: rem(18);
@@ -78,6 +82,11 @@ export default {
     letter-spacing: rem(0.6);
     margin: 0;
     padding: 0;
+
+    @media only screen and (min-width: 650px) {
+      font-size: rem(24);
+      line-height: rem(28.5);
+    }
   }
 
   &:after {
@@ -95,6 +104,13 @@ export default {
     background: #edf3f9;
     border-radius: rem(100);
     box-sizing: border-box;
+
+    @media only screen and (min-width: 650px) {
+      width: rem(40);
+      height: rem(40);
+      padding: rem(12);
+      font-size: rem(16);
+    }
   }
 }
 
@@ -112,6 +128,15 @@ export default {
   font-size: rem(16);
   line-height: rem(20);
   letter-spacing: rem(0.4);
+
+  @media only screen and (min-width: 650px) {
+    margin-right: rem(60);
+    margin-top: rem(4);
+    margin-bottom: rem(0);
+    font-size: rem(20);
+    line-height: rem(28.5);
+    letter-spacing: rem(0.6);
+  }
 }
 
 .accordion-enter-active,

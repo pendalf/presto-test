@@ -28,6 +28,11 @@ export default {
   margin: 0;
   padding: 0;
 
+  @media only screen and (min-width: 650px) {
+    //column-count: 2;
+    //column-gap: rem(60);
+  }
+
   &__item:last-child {
     border-bottom: none;
   }
