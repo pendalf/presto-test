@@ -28,26 +28,43 @@ export default {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  padding: rem(10) rem(24);
-  position: static;
-  height: rem(40);
+  padding: rem(16) rem(24);
+  height: rem(56);
   background: #eff3f6;
-  border-radius: rem(1000);
-  font-size: rem(16);
-  line-height: rem(20);
+  font-size: rem(18);
+  line-height: rem(24);
   text-align: center;
-  letter-spacing: rem(0.4);
+  letter-spacing: rem(0.7);
   box-sizing: border-box;
   color: $main-text-color;
   border: 0;
+  border-radius: rem(8);
+
+  &--login {
+    padding: rem(10) rem(24);
+    height: rem(40);
+    font-size: rem(16);
+    line-height: rem(20);
+    letter-spacing: rem(0.4);
+    border-radius: rem(1000);
+  }
+
+  &--round {
+    border-radius: rem(1000);
+  }
 
   &--more {
+    padding: rem(10) rem(24);
     font-weight: 500;
     font-size: rem(14);
     line-height: rem(16);
     letter-spacing: rem(0.6);
     color: #005bff;
     height: rem(36);
+    border-radius: rem(1000);
+  }
+  &--white {
+    background: #ffffff;
   }
 }
 </style>

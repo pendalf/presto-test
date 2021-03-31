@@ -2,15 +2,18 @@
   <div class="super">
     <Header />
     <nuxt />
+    <Prefooter />
   </div>
 </template>
 
 <script>
-import Header from '~/components/layout/Header.vue'
+import Header from '~/components/layout/Header'
+import Prefooter from '~/components/layout/Prefooter'
 
 export default {
   components: {
     Header,
+    Prefooter,
   },
   head() {
     const canonical = `https://mysite.com${this.$route.path
