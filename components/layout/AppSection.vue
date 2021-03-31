@@ -7,6 +7,10 @@
     <div v-if="isSubtitle" class="section__subtitle">
       <slot name="section-subtitle" />
     </div>
+    <h2 v-if="isSliderTitle" class="section__slider-title">
+      <slot name="section-slider-title" />
+    </h2>
+
     <div class="section__content">
       <slot />
     </div>
@@ -36,6 +40,9 @@ export default {
     isFooter() {
       return !!this.$slots['section-footer']
     },
+    isSliderTitle() {
+      return !!this.$slots['section-slider-title']
+    },
   },
 }
 </script>
@@ -51,11 +58,11 @@ export default {
   }
 }
 .section {
-  max-width: 320px;
+  max-width: rem(320);
   margin: 0 auto;
 
   @media only screen and (min-width: 650px) {
-    max-width: 1920px;
+    max-width: rem(1920);
   }
 
   &__title {
@@ -66,6 +73,12 @@ export default {
     letter-spacing: rem(0.6);
 
     @extend %inner-margin;
+
+    @media only screen and (min-width: 650px) {
+      margin-top: rem(66);
+      font-size: rem(30);
+      line-height: rem(36);
+    }
   }
   &__subtitle {
     margin-top: rem(12);
@@ -76,6 +89,20 @@ export default {
     letter-spacing: rem(0.4);
 
     @extend %inner-margin;
+  }
+  &__slider-title {
+    font-weight: 500;
+    font-size: rem(24);
+    line-height: rem(28);
+    letter-spacing: rem(0.6);
+
+    @extend %inner-margin;
+
+    @media only screen and (min-width: 650px) {
+      margin-top: rem(66);
+      font-size: rem(30);
+      line-height: rem(36);
+    }
   }
   &__content {
     @extend %inner-margin;

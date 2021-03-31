@@ -58,7 +58,18 @@ export default {
     return {
       slickOptions: {
         dots: false,
-        arrows: false,
+        arrows: true,
+        mobileFirst: true,
+        slidesToShow: 4,
+        responsive: [
+          {
+            breakpoint: 650,
+            settings: {
+              arrows: false,
+              slidesToShow: 1,
+            },
+          },
+        ],
       },
     }
   },

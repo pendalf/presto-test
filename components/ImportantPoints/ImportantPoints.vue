@@ -1,5 +1,6 @@
 <template>
-  <AppSection :title="'Важное про Ozon'" :section-suffix="'important-point'">
+  <AppSection :section-suffix="'important-point'">
+    <template slot="section-slider-title">Важное про Ozon</template>
     <SlickCarousel v-if="items.length" :options="options">
       <ImportantPoint
         v-for="(item, index) in items"
@@ -36,6 +37,16 @@ export default {
 .section--important-point {
   .slick-carousel {
     width: rem(136);
+    @media only screen and (min-width: 650px) {
+      width: auto;
+      margin-left: rem(-24);
+      margin-right: rem(-16);
+    }
+    .slick-slide {
+      @media only screen and (min-width: 650px) {
+        padding-left: rem(24);
+      }
+    }
   }
 }
 </style>

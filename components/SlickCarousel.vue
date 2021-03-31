@@ -58,5 +58,40 @@ export default {
     display: flex;
     align-items: stretch;
   }
+  .slick-arrow {
+    position: absolute;
+    bottom: 100%;
+    right: rem(16);
+    top: auto;
+    left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: rem(12);
+    width: rem(48);
+    height: rem(48);
+    background: #ccd8e4;
+    border-radius: rem(100);
+    box-sizing: border-box;
+    margin-bottom: rem(-5);
+
+    &:before {
+      font-family: 'icomoon' !important;
+      color: $main-text-color;
+      font-size: rem(22);
+    }
+  }
+  .slick-prev {
+    margin-right: rem(60);
+    &:before {
+      content: $icon-arrow-left;
+    }
+  }
+  .slick-next {
+    &:before {
+      content: $icon-arrow-right;
+    }
+  }
 }
 </style>
