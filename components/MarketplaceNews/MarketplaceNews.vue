@@ -87,6 +87,7 @@ export default {
 <style lang="scss">
 .section--news-items {
   margin-bottom: rem(18);
+
   .slick-carousel {
     margin-left: rem(-24);
 
@@ -98,6 +99,7 @@ export default {
       width: auto;
       margin-left: rem(-24);
       margin-top: 0;
+      margin-bottom: rem(11);
     }
 
     .slick-slide {

@@ -1,6 +1,7 @@
 <template>
-  <AppSection :title="'Статьи'" :section-suffix="'articles-items'">
-    <SlickCarousel v-if="items.length" :options="options">
+  <AppSection :section-suffix="'articles-items'">
+    <template slot="section-slider-title">Статьи</template>
+    <SlickCarousel v-if="items.length" :options="slickOptions">
       <appArticle v-for="(item, index) in items" :key="index" :item="item" />
     </SlickCarousel>
     <appBtn :to="'/'" class="btn--more" type="button">Читать все статьи</appBtn>
@@ -31,6 +32,20 @@ export default {
       default: () => {},
     },
   },
+  data() {
+    return {
+      slickOptions: {
+        rows: 2,
+        dots: false,
+        arrows: true,
+        mobileFirst: true,
+        slidesToShow: 2,
+        responsive: [
+          { breakpoint: 650, settings: { arrows: false, slidesToShow: 1 } },
+        ],
+      },
+    }
+  },
   computed: {},
 }
 </script>
@@ -42,6 +57,32 @@ export default {
     margin-top: rem(28);
     margin-bottom: rem(32);
     width: rem(236);
+
+    @media only screen and (min-width: 650px) {
+      width: auto;
+      margin-left: rem(-24);
+      margin-top: rem(0);
+    }
+
+    .slick-slide {
+      @media only screen and (min-width: 650px) {
+        padding: 0 0 0 rem(24);
+        flex-direction: column;
+
+        & > * {
+          height: 50%;
+        }
+      }
+    }
+  }
+  .btn--more {
+    @media only screen and (min-width: 650px) {
+      order: -1;
+      margin-bottom: rem(40);
+      align-self: flex-end;
+      margin-right: rem(120);
+      margin-top: rem(-61);
+    }
   }
 }
 </style>
