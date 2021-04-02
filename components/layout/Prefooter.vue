@@ -4,7 +4,7 @@
       Узнавайте информацию из первых рук, общайтесь с действующими продавцами,
       будьте в курсе новых инструментов и возможностей маркетплейса.
     </template>
-    <accordion>
+    <accordion class="accordion--prefooter">
       <accordion-item v-for="(item, index) in faq" :key="index">
         <template slot="accordion-trigger">
           <h3>{{ item.title }}</h3>
@@ -51,6 +51,10 @@ export default {
   margin-top: rem(36);
   display: flex;
   flex-direction: column;
+  @media only screen and (min-width: 650px) {
+    padding-top: rem(41);
+    padding-bottom: rem(140);
+  }
   .section {
     &__subtitle {
       margin-bottom: 0;
@@ -61,6 +65,55 @@ export default {
   }
   .accordion__trigger:after {
     background: none;
+  }
+
+  @media only screen and (min-width: 650px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto 1fr;
+    grid-column-gap: rem(0);
+    grid-row-gap: rem(0);
+
+    .section {
+      &__title {
+        grid-area: 1 / 1 / 2 / 2;
+        margin-top: rem(40);
+      }
+      &__subtitle {
+        grid-area: 2 / 1 / 3 / 2;
+        margin-top: 0;
+        font-size: rem(20);
+        line-height: rem(28.5);
+        letter-spacing: rem(0.6);
+        margin-top: rem(8);
+      }
+      &__footer {
+        grid-area: 3 / 1 / 4 / 2;
+        margin-top: rem(32);
+      }
+      &__content {
+        grid-area: 1 / 2 / 4 / 3;
+        margin-left: rem(16);
+      }
+    }
+  }
+  .accordion--prefooter {
+    .accordion__trigger {
+      h3 {
+        @media only screen and (min-width: 650px) {
+          font-weight: normal;
+          font-size: rem(30);
+          line-height: rem(36);
+          letter-spacing: rem(0.6);
+        }
+      }
+    }
+    .accordion__content {
+      @media only screen and (min-width: 650px) {
+        margin-top: rem(19);
+        // margin-right: rem(50);
+      }
+    }
   }
 }
 </style>
