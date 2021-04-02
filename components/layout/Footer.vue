@@ -36,7 +36,7 @@
       </div>
     </div>
     <div class="footer-block">
-      <h2 class="footer-block__title">Полезные ссылки</h2>
+      <h2 class="footer-block__title">Мы с соцсетях</h2>
       <div class="footer-block__content">
         <ul class="socials">
           <li class="socials__item">
@@ -73,9 +73,18 @@ export default {
   flex-direction: column;
   padding-top: rem(8);
   padding-bottom: rem(36);
+
+  @media only screen and (min-width: 650px) {
+    flex-direction: row;
+    padding-bottom: rem(60);
+    gap: rem(90);
+  }
 }
 .footer-block {
   margin: rem(32) rem(16) 0;
+  @media only screen and (min-width: 650px) {
+    margin: rem(52) rem(28) 0;
+  }
   &__title {
     margin: 0;
     padding: 0;
@@ -83,11 +92,19 @@ export default {
     font-size: rem(18);
     line-height: rem(24);
     letter-spacing: rem(0.6);
+
+    @media only screen and (min-width: 650px) {
+      font-size: rem(20);
+      line-height: rem(24.5);
+    }
   }
   &__links-list {
     margin: 0;
     padding: rem(8) 0 0;
     list-style: none;
+    @media only screen and (min-width: 650px) {
+      padding-top: rem(9);
+    }
   }
   &__links-item {
     list-style: none;
@@ -98,16 +115,22 @@ export default {
     line-height: rem(16);
     letter-spacing: rem(0.4);
 
+    @media only screen and (min-width: 650px) {
+      font-size: rem(16);
+      line-height: rem(20.5);
+      // margin: rem(10) 0 0;
+    }
+
     a {
       color: #ffffff;
     }
   }
   .socials {
-    padding: rem(12) 0 0;
+    padding: rem(4) 0 0;
     margin: 0;
     list-style: none;
     display: flex;
-    gap: rem(32);
+    gap: rem(16);
     align-items: center;
 
     &__item {
@@ -118,6 +141,15 @@ export default {
 
       a {
         color: #ffffff;
+        width: rem(38);
+        height: rem(38);
+        border-radius: rem(8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media only screen and (min-width: 650px) {
+          background: #15171f;
+        }
         &:hover {
           text-decoration: none;
         }
