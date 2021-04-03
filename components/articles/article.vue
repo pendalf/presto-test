@@ -14,7 +14,7 @@
     </div>
     <div class="articles__row articles__title">{{ item.title }}</div>
     <div class="articles__row articles__excerpt">
-      {{ item.excerpt }}
+      {{ item.excerpt | truncate(100, '...') }}
     </div>
     <div v-if="link" class="articles__row articles__more">
       <nuxt-link :to="link">Читать статью</nuxt-link>
@@ -24,6 +24,17 @@
 
 <script>
 export default {
+  filters: {
+    truncate(text, length, suffix) {
+      if (text.length > length) {
+        const cut = text.substring(0, length)
+        const i = cut.lastIndexOf('.') || cut.lastIndexOf(' ')
+        return cut.slice(0, i) + suffix
+      } else {
+        return text
+      }
+    },
+  },
   props: {
     item: {
       type: Object,

@@ -69,14 +69,17 @@ export default {
         padding: 0 0 0 rem(24);
         flex-direction: column;
 
-        & > * {
-          height: 50%;
-        }
-      }
-      @media only screen and (min-width: 1200px) {
+        display: grid !important;
+        grid-auto-rows: 1fr;
         & > * {
           margin-bottom: rem(40);
         }
+      }
+    }
+    .slick-track {
+      @media only screen and (min-width: 650px) {
+        display: grid;
+        grid-template-columns: repeat(100, 1fr);
       }
     }
   }
