@@ -88,6 +88,10 @@ export default {
 .section--news-items {
   margin-bottom: rem(18);
 
+  @media only screen and (min-width: 1200px) {
+    margin-bottom: rem(72);
+  }
+
   .slick-carousel {
     margin-left: rem(-24);
 

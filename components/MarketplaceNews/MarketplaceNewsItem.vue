@@ -71,6 +71,7 @@ export default {
       width: rem(276) !important;
       min-height: rem(348);
       padding-bottom: rem(40);
+      border-radius: rem(20);
     }
   }
   &__row {

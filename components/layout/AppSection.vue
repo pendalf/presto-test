@@ -138,7 +138,7 @@ export default {
     }
     @media only screen and (min-width: 1200px) {
       margin-top: rem(67);
-      margin-bottom: rem(24);
+      margin-bottom: rem(17.5);
     }
   }
   &__content {

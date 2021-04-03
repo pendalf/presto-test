@@ -52,5 +52,11 @@ export default {
       right: rem(16);
     }
   }
+
+  .section__slider-title {
+    @media only screen and (min-width: 1200px) {
+      margin-bottom: rem(24);
+    }
+  }
 }
 </style>
