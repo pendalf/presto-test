@@ -73,6 +73,11 @@ export default {
           height: 50%;
         }
       }
+      @media only screen and (min-width: 1200px) {
+        & > * {
+          margin-bottom: rem(40);
+        }
+      }
     }
   }
   .btn--more {
