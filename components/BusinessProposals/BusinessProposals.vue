@@ -68,6 +68,9 @@ export default {
     gap: rem(60);
     margin-top: rem(-5);
   }
+  @media only screen and (min-width: 1200px) {
+    margin-top: rem(8);
+  }
   &__col {
     flex-basis: 100%;
   }

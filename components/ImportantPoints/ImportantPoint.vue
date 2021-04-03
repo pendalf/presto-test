@@ -40,6 +40,7 @@ export default {
       margin-top: rem(47);
       padding: rem(24) rem(21) rem(40);
       min-height: rem(215);
+      border-radius: rem(20);
     }
 
     .slick-slide:first-child &,
@@ -57,6 +58,12 @@ export default {
       @media only screen and (min-width: 650px) {
         margin-top: rem(21);
         padding: rem(41) rem(21) rem(49);
+        box-shadow: rem(0) rem(47) rem(304) rgba(0, 26, 52, 0.04),
+          rem(0) rem(30.463) rem(178.037) rgba(0, 26, 52, 0.0303704),
+          rem(0) rem(18.1037) rem(96.8296) rgba(0, 26, 52, 0.0242963),
+          rem(0) rem(9.4) rem(49.4) rgba(0, 26, 52, 0.02),
+          rem(0) rem(3.82963) rem(24.7704) rgba(0, 26, 52, 0.0157037),
+          rem(0) rem(0.87037) rem(11.963) rgba(0, 26, 52, 0.00962963);
       }
     }
   }

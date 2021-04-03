@@ -75,6 +75,10 @@ export default {
     margin-top: rem(40);
   }
 
+  @media only screen and (min-width: 1200px) {
+    margin-top: rem(28);
+  }
+
   h3 {
     font-weight: 500;
     font-size: rem(18);

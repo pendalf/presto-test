@@ -95,6 +95,9 @@ export default {
     @media only screen and (min-width: 1200px) {
       font-size: rem(72);
       line-height: rem(72);
+      max-width: rem(550);
+      margin-top: rem(65);
+      margin-bottom: rem(24);
     }
   }
   &__subtitle {
@@ -109,6 +112,9 @@ export default {
       margin-top: rem(0);
       max-width: rem(650);
       line-height: rem(20.5);
+    }
+    @media only screen and (min-width: 1200px) {
+      margin-bottom: rem(40);
     }
   }
   &__subtitle + &__slider-title {
