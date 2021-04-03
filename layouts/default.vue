@@ -52,6 +52,12 @@ html {
   @media only screen and (min-width: 650px) {
     font-size: (16/992) * 100vw;
   }
+  @media only screen and (min-width: 1200px) {
+    font-size: (16/1472) * 100vw;
+  }
+  @media only screen and (min-width: 1921px) {
+    font-size: rem(16 / 1472 * 1920);
+  }
 }
 body {
   color: $main-text-color;

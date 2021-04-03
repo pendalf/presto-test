@@ -56,6 +56,12 @@ export default {
     margin-right: rem(28);
     margin-left: rem(28);
   }
+
+  @media only screen and (min-width: 1200px) {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: rem(1176);
+  }
 }
 .section {
   max-width: rem(320);

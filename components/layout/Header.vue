@@ -141,6 +141,10 @@ export default {
     height: rem(80);
     padding: rem(19) rem(28) rem(21);
   }
+  @media only screen and (min-width: 650px) {
+    height: rem(80);
+    padding: rem(19) rem(28) rem(21);
+  }
 }
 .promo {
   margin: rem(40) rem(16);
@@ -148,6 +152,13 @@ export default {
   flex-direction: column;
   flex-grow: 1;
   justify-content: center;
+
+  @media only screen and (min-width: 1200px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(1176);
+    width: 100%;
+  }
 
   &__title {
     font-weight: 500;
@@ -164,6 +175,13 @@ export default {
       line-height: rem(48);
       letter-spacing: rem(0.8);
     }
+    @media only screen and (min-width: 1200px) {
+      width: rem(680);
+      margin-left: 0;
+      font-weight: 500;
+      font-size: rem(80);
+      line-height: rem(80);
+    }
   }
   &__text {
     font-weight: 350;
@@ -172,12 +190,18 @@ export default {
     letter-spacing: rem(0.4);
     color: #ffffff;
     margin: rem(16) 0;
+
     @media only screen and (min-width: 650px) {
       width: rem(536);
       margin-left: rem(108);
       font-size: rem(20);
       line-height: rem(28);
       letter-spacing: rem(0.6);
+    }
+    @media only screen and (min-width: 1200px) {
+      width: rem(680);
+      margin-left: 0;
+      margin-top: rem(15);
     }
   }
   &__scroll-to {
@@ -195,6 +219,16 @@ export default {
     box-sizing: border-box;
     color: #ffffff;
     font-size: rem(14);
+    visibility: hidden;
+
+    @media only screen and (min-width: 650px) {
+      visibility: visible;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      right: rem(148);
+      bottom: rem(148);
+    }
   }
 }
 
