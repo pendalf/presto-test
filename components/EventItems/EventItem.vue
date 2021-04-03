@@ -130,6 +130,9 @@ export default {
       font-size: rem(14.5);
       letter-spacing: rem(0.4);
     }
+    @media only screen and (min-width: 1200px) {
+      padding-bottom: rem(8);
+    }
 
     &.dark {
       background: #000912;
@@ -164,7 +167,8 @@ export default {
     padding: 0;
     margin-top: rem(4);
     list-style: none;
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: 1200px) {
+      margin-top: rem(3);
     }
   }
   &__points-item {
@@ -197,7 +201,7 @@ export default {
     margin-top: auto;
 
     @media only screen and (min-width: 650px) {
-      font-size: rem(18);
+      font-size: rem(16);
       line-height: rem(20);
     }
   }

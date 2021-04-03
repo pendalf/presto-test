@@ -67,6 +67,11 @@ export default {
 <style lang="scss">
 .section--event-items {
   margin-bottom: rem(16);
+
+  @media only screen and (min-width: 1200px) {
+    margin-bottom: rem(105);
+  }
+
   .slick-carousel {
     margin-bottom: rem(36);
     width: rem(260);

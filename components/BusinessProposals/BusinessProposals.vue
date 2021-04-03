@@ -60,6 +60,9 @@ export default {
     padding-top: rem(3);
     margin-bottom: rem(121);
   }
+  @media only screen and (min-width: 1200px) {
+    margin-bottom: rem(160);
+  }
 }
 .accordion-props {
   @media only screen and (min-width: 650px) {
