@@ -1,57 +1,59 @@
 <template>
   <footer class="section section--footer">
-    <div class="footer-block">
-      <h2 class="footer-block__title">Полезные ссылки</h2>
-      <div class="footer-block__content">
-        <ul class="footer-block__links-list">
-          <li class="footer-block__links-item">
-            <nuxt-link to="">Полезные ссылки</nuxt-link>
-          </li>
-          <li class="footer-block__links-item">
-            <nuxt-link to="">Адреса складов Ozon</nuxt-link>
-          </li>
-          <li class="footer-block__links-item">
-            <nuxt-link to="">Правила упаковки FBO</nuxt-link>
-          </li>
-          <li class="footer-block__links-item">
-            <nuxt-link to="">Правила упаковки FBS</nuxt-link>
-          </li>
-        </ul>
+    <div class="section__inner">
+      <div class="footer-block">
+        <h2 class="footer-block__title">Полезные ссылки</h2>
+        <div class="footer-block__content">
+          <ul class="footer-block__links-list">
+            <li class="footer-block__links-item">
+              <nuxt-link to="">Полезные ссылки</nuxt-link>
+            </li>
+            <li class="footer-block__links-item">
+              <nuxt-link to="">Адреса складов Ozon</nuxt-link>
+            </li>
+            <li class="footer-block__links-item">
+              <nuxt-link to="">Правила упаковки FBO</nuxt-link>
+            </li>
+            <li class="footer-block__links-item">
+              <nuxt-link to="">Правила упаковки FBS</nuxt-link>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="footer-block">
-      <h2 class="footer-block__title">Ещё есть</h2>
-      <div class="footer-block__content">
-        <ul class="footer-block__links-list">
-          <li class="footer-block__links-item">
-            <nuxt-link to="">Новости</nuxt-link>
-          </li>
-          <li class="footer-block__links-item">
-            <nuxt-link to="">Ozon Seller API</nuxt-link>
-          </li>
-          <li class="footer-block__links-item">
-            <nuxt-link to="">Продажи из-за рубежа</nuxt-link>
-          </li>
-        </ul>
+      <div class="footer-block">
+        <h2 class="footer-block__title">Ещё есть</h2>
+        <div class="footer-block__content">
+          <ul class="footer-block__links-list">
+            <li class="footer-block__links-item">
+              <nuxt-link to="">Новости</nuxt-link>
+            </li>
+            <li class="footer-block__links-item">
+              <nuxt-link to="">Ozon Seller API</nuxt-link>
+            </li>
+            <li class="footer-block__links-item">
+              <nuxt-link to="">Продажи из-за рубежа</nuxt-link>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="footer-block">
-      <h2 class="footer-block__title">Мы с соцсетях</h2>
-      <div class="footer-block__content">
-        <ul class="socials">
-          <li class="socials__item">
-            <a href=""><i class="icon-instagram"></i></a>
-          </li>
-          <li class="socials__item">
-            <a href=""><i class="icon-facebook"></i></a>
-          </li>
-          <li class="socials__item">
-            <a href=""><i class="icon-vk"></i></a>
-          </li>
-          <li class="socials__item">
-            <a href=""><i class="icon-twitter"></i></a>
-          </li>
-        </ul>
+      <div class="footer-block">
+        <h2 class="footer-block__title">Мы с соцсетях</h2>
+        <div class="footer-block__content">
+          <ul class="socials">
+            <li class="socials__item">
+              <a href=""><i class="icon-instagram"></i></a>
+            </li>
+            <li class="socials__item">
+              <a href=""><i class="icon-facebook"></i></a>
+            </li>
+            <li class="socials__item">
+              <a href=""><i class="icon-vk"></i></a>
+            </li>
+            <li class="socials__item">
+              <a href=""><i class="icon-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </footer>
@@ -69,15 +71,21 @@ export default {
 .section--footer {
   background: #101117;
   color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  padding-top: rem(8);
-  padding-bottom: rem(36);
 
-  @media only screen and (min-width: 650px) {
-    flex-direction: row;
-    padding-bottom: rem(60);
-    gap: rem(90);
+  .section__inner {
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(8);
+    padding-bottom: rem(36);
+
+    @media only screen and (min-width: 650px) {
+      flex-direction: row;
+      padding-bottom: rem(60);
+      gap: rem(90);
+    }
+    @media only screen and (min-width: 1200px) {
+      gap: rem(198);
+    }
   }
 }
 .footer-block {
@@ -85,6 +93,11 @@ export default {
   @media only screen and (min-width: 650px) {
     margin: rem(52) rem(28) 0;
   }
+
+  @media only screen and (min-width: 1200px) {
+    margin-left: 0;
+  }
+
   &__title {
     margin: 0;
     padding: 0;
