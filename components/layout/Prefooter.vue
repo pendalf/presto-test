@@ -49,11 +49,14 @@ export default {
   color: #ffffff;
   padding-bottom: rem(40);
   margin-top: rem(36);
-  display: flex;
-  flex-direction: column;
   @media only screen and (min-width: 650px) {
     padding-top: rem(41);
     padding-bottom: rem(140);
+  }
+  @media only screen and (min-width: 1200px) {
+    padding-top: rem(80);
+    border-radius: rem(60) rem(60) rem(0) rem(0);
+    padding-bottom: rem(108);
   }
   .section {
     &__subtitle {
@@ -62,18 +65,39 @@ export default {
     &__footer {
       margin-top: rem(32);
     }
+    &__inner {
+      display: flex;
+      flex-direction: column;
+
+      @media only screen and (min-width: 650px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows:
+          auto
+          auto 1fr;
+        grid-column-gap: rem(0);
+        grid-row-gap: rem(0);
+      }
+    }
   }
-  .accordion__trigger:after {
-    background: none;
+  .accordion__trigger {
+    @media only screen and (min-width: 1200px) {
+      margin-top: rem(32);
+    }
+    h3 {
+      @media only screen and (min-width: 1200px) {
+        font-weight: normal;
+        font-size: rem(30);
+        line-height: rem(36);
+        letter-spacing: rem(0.6);
+      }
+    }
+    &:after {
+      background: none;
+    }
   }
 
   @media only screen and (min-width: 650px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto 1fr;
-    grid-column-gap: rem(0);
-    grid-row-gap: rem(0);
-
     .section {
       &__title {
         grid-area: 1 / 1 / 2 / 2;
@@ -97,7 +121,15 @@ export default {
       }
     }
   }
+  @media only screen and (min-width: 1200px) {
+    .section__content {
+      margin-left: rem(12);
+    }
+  }
   .accordion--prefooter {
+    @media only screen and (min-width: 1200px) {
+      padding-top: rem(9);
+    }
     .accordion__trigger {
       h3 {
         @media only screen and (min-width: 650px) {
@@ -112,6 +144,9 @@ export default {
       @media only screen and (min-width: 650px) {
         margin-top: rem(19);
         // margin-right: rem(50);
+      }
+      @media only screen and (min-width: 1200px) {
+        padding-bottom: rem(1);
       }
     }
   }
