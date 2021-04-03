@@ -60,8 +60,15 @@ export default {
         dots: false,
         arrows: true,
         mobileFirst: true,
-        slidesToShow: 4,
+        slidesToShow: 5,
         responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              arrows: true,
+              slidesToShow: 4,
+            },
+          },
           {
             breakpoint: 650,
             settings: {

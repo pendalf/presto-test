@@ -3,19 +3,21 @@
     class="section"
     :class="sectionSuffix ? `section--${sectionSuffix}` : ''"
   >
-    <h2 v-if="title" class="section__title">{{ title }}</h2>
-    <div v-if="isSubtitle" class="section__subtitle">
-      <slot name="section-subtitle" />
-    </div>
-    <h2 v-if="isSliderTitle" class="section__slider-title">
-      <slot name="section-slider-title" />
-    </h2>
+    <div class="section__inner">
+      <h2 v-if="title" class="section__title">{{ title }}</h2>
+      <div v-if="isSubtitle" class="section__subtitle">
+        <slot name="section-subtitle" />
+      </div>
+      <h2 v-if="isSliderTitle" class="section__slider-title">
+        <slot name="section-slider-title" />
+      </h2>
 
-    <div class="section__content">
-      <slot />
-    </div>
-    <div v-if="isFooter" class="section__footer">
-      <slot name="section-footer" />
+      <div class="section__content">
+        <slot />
+      </div>
+      <div v-if="isFooter" class="section__footer">
+        <slot name="section-footer" />
+      </div>
     </div>
   </section>
 </template>
@@ -71,14 +73,16 @@ export default {
     max-width: rem(1920);
   }
 
+  &__inner {
+    @extend %inner-margin;
+  }
+
   &__title {
     margin-top: rem(40);
     font-weight: 500;
     font-size: rem(24);
     line-height: rem(28);
     letter-spacing: rem(0.6);
-
-    @extend %inner-margin;
 
     @media only screen and (min-width: 650px) {
       margin-top: rem(66);
@@ -88,6 +92,10 @@ export default {
       max-width: rem(350);
       margin-bottom: rem(23);
     }
+    @media only screen and (min-width: 1200px) {
+      font-size: rem(72);
+      line-height: rem(72);
+    }
   }
   &__subtitle {
     margin-top: rem(12);
@@ -96,8 +104,6 @@ export default {
     font-size: rem(16);
     line-height: rem(20);
     letter-spacing: rem(0.4);
-
-    @extend %inner-margin;
 
     @media only screen and (min-width: 650px) {
       margin-top: rem(0);
@@ -110,26 +116,27 @@ export default {
   }
   &__slider-title {
     font-weight: 500;
+    margin-top: rem(40);
     font-size: rem(24);
     line-height: rem(28);
     letter-spacing: rem(0.6);
 
-    @extend %inner-margin;
-
     @media only screen and (min-width: 650px) {
       margin-top: rem(66);
+      margin-bottom: rem(25);
       font-size: rem(30);
       line-height: rem(36);
+    }
+    @media only screen and (min-width: 1200px) {
+      margin-top: rem(67);
+      margin-bottom: rem(24);
     }
   }
   &__content {
     display: flex;
     flex-direction: column;
-
-    @extend %inner-margin;
   }
   &__footer {
-    @extend %inner-margin;
   }
 }
 </style>

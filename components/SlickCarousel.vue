@@ -52,6 +52,7 @@ export default {
 
     & > div {
       display: flex;
+      width: 100%;
     }
   }
   .slick-track {

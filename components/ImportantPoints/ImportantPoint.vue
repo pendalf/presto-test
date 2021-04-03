@@ -83,7 +83,11 @@ export default {
     @media only screen and (min-width: 650px) {
       font-size: rem(16);
       line-height: rem(20.5);
+      max-width: rem(160);
       //margin-top: rem(5);
+    }
+    @media only screen and (min-width: 1200px) {
+      margin-top: rem(3);
     }
   }
 }
