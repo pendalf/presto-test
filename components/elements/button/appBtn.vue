@@ -39,6 +39,14 @@ export default {
   color: $main-text-color;
   border: 0;
   border-radius: rem(8);
+  text-decoration: none;
+  opacity: 1;
+  transition: 0.2s all;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
 
   &--login {
     padding: rem(10) rem(24);

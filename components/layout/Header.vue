@@ -9,28 +9,7 @@
         <div v-if="viewport === 'mobile'" class="navbar__header">
           <i class="navbar__close icon-close" @click="burgerMenuClose"></i>
         </div>
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <nuxt-link to="">С чего начать</nuxt-link>
-            </li>
-            <li class="menu__item">
-              <nuxt-link to="">Истории успеха</nuxt-link>
-            </li>
-            <li class="menu__item">
-              <nuxt-link to="">Обучение</nuxt-link>
-            </li>
-            <li class="menu__item">
-              <nuxt-link to="">О компании</nuxt-link>
-            </li>
-            <li v-if="viewport === 'mobile'" class="menu__item">
-              <nuxt-link to="">Наши сервисы</nuxt-link>
-            </li>
-            <li v-if="viewport === 'mobile'" class="menu__item">
-              <nuxt-link to="">Мероприятия</nuxt-link>
-            </li>
-          </ul>
-        </nav>
+        <nav-menu></nav-menu>
         <nuxt-link to="" class="btn btn--login">Войти</nuxt-link>
       </div>
       <div
@@ -61,8 +40,12 @@
 </template>
 
 <script>
+import navMenu from '~/components/elements/menu/nav-menu'
 export default {
   name: 'Header',
+  components: {
+    navMenu,
+  },
   data() {
     return {
       menuOpen: false,
@@ -124,6 +107,10 @@ export default {
   // width: rem(82);
   @media only screen and (min-width: 650px) {
     width: rem(204);
+  }
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 .top-bar {
@@ -261,7 +248,6 @@ export default {
   z-index: 100;
   transform: translateX(100%);
   transition: 0.4s all;
-
   @media only screen and (min-width: 650px) {
     transform: translateX(0);
     background: transparent;
@@ -269,12 +255,12 @@ export default {
     height: auto;
     padding: 0;
     position: static;
-
     display: flex;
     align-items: center;
     gap: rem(32);
+    width: 100%;
+    transition: false;
   }
-
   &__header {
     height: rem(56);
     display: flex;
@@ -288,41 +274,6 @@ export default {
   }
   &.mobile-open {
     transform: translateX(0);
-  }
-}
-
-.menu {
-  &__list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    @media only screen and (min-width: 650px) {
-      display: flex;
-      gap: rem(32);
-    }
-  }
-  &__item {
-    margin: rem(32) 0 0;
-    padding: 0;
-    font-size: rem(16);
-    line-height: rem(20);
-    letter-spacing: rem(0.4);
-
-    @media only screen and (min-width: 650px) {
-      font-weight: normal;
-      font-size: rem(16);
-      line-height: rem(20);
-      text-align: center;
-      letter-spacing: rem(0.4);
-      margin-top: 0;
-    }
-
-    a {
-      color: $main-text-color;
-      @media only screen and (min-width: 650px) {
-        color: $basic-bg-color;
-      }
-    }
   }
 }
 

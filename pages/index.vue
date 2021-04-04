@@ -37,7 +37,7 @@ export default {
         $axios.get('/mock/BusinessProposals.json'),
         $axios.get('https://seller-events-api-desc.herokuapp.com/api/news'),
         $axios.get('https://seller-events-api-desc.herokuapp.com/api/articles'),
-        store.dispatch('fetchFAQ'),
+        store.dispatch('dataPrepare'),
       ])
       return {
         events: events.data,

@@ -14,45 +14,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-instagram {
-    &:before {
-        content: $icon-instagram;
-    }
-}
-
-.icon-vk {
-    &:before {
-        content: $icon-vk;
-    }
-}
-
 .icon-check {
     &:before {
         content: $icon-check;
     }
 }
 
-.icon-burger {
+.icon-arrow-down {
     &:before {
-        content: $icon-burger;
-    }
-}
-
-.icon-close {
-    &:before {
-        content: $icon-close;
-    }
-}
-
-.icon-twitter {
-    &:before {
-        content: $icon-twitter;
-    }
-}
-
-.icon-plus {
-    &:before {
-        content: $icon-plus;
+        content: $icon-arrow-down;
     }
 }
 
@@ -68,9 +38,39 @@
     }
 }
 
-.icon-arrow-down {
+.icon-ellipsis {
     &:before {
-        content: $icon-arrow-down;
+        content: $icon-ellipsis;
+    }
+}
+
+.icon-burger {
+    &:before {
+        content: $icon-burger;
+    }
+}
+
+.icon-close {
+    &:before {
+        content: $icon-close;
+    }
+}
+
+.icon-plus {
+    &:before {
+        content: $icon-plus;
+    }
+}
+
+.icon-minus {
+    &:before {
+        content: $icon-minus;
+    }
+}
+
+.icon-vk {
+    &:before {
+        content: $icon-vk;
     }
 }
 
@@ -80,8 +80,14 @@
     }
 }
 
-.icon-minus {
+.icon-twitter {
     &:before {
-        content: $icon-minus;
+        content: $icon-twitter;
+    }
+}
+
+.icon-instagram {
+    &:before {
+        content: $icon-instagram;
     }
 }
