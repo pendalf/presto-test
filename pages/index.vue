@@ -63,14 +63,14 @@ export default {
         slidesToShow: 5,
         responsive: [
           {
-            breakpoint: 1200,
+            breakpoint: 1199,
             settings: {
               arrows: true,
               slidesToShow: 4,
             },
           },
           {
-            breakpoint: 650,
+            breakpoint: 649,
             settings: {
               arrows: false,
               slidesToShow: 1,

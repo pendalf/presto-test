@@ -41,7 +41,14 @@ export default {
         mobileFirst: true,
         slidesToShow: 2,
         responsive: [
-          { breakpoint: 650, settings: { arrows: false, slidesToShow: 1 } },
+          {
+            breakpoint: 650,
+            settings: {
+              rows: 1,
+              arrows: false,
+              slidesToShow: 1,
+            },
+          },
         ],
       },
     }

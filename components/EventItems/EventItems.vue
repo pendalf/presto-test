@@ -46,12 +46,22 @@ export default {
         dots: false,
         arrows: true,
         mobileFirst: true,
-        slidesToShow: 2,
+        slidesToShow: 3,
         variableWidth: true,
         responsive: [
           {
+            breakpoint: 1200,
+            settings: {
+              dots: false,
+              arrows: true,
+              slidesToShow: 2,
+            },
+          },
+
+          {
             breakpoint: 650,
             settings: {
+              variableWidth: false,
               arrows: false,
               slidesToShow: 1,
             },
