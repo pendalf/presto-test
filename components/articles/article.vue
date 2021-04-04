@@ -1,10 +1,18 @@
 <template>
   <div class="articles__item">
     <div v-if="imgUrl" class="articles__row articles__photo">
-      <div
-        class="articles__photo-content"
-        :style="`background-image: url(${imgUrl})`"
-      ></div>
+      <div class="articles__photo-content">
+        <nuxt-picture
+          v-if="imgUrl"
+          :src="imgUrl"
+          sizes="sm:340px"
+          format="webp"
+          :alt="imgAlternate"
+          width="240"
+          height="240"
+          fit="cover"
+        ></nuxt-picture>
+      </div>
     </div>
     <div v-if="itemDate" class="articles__row articles__date">
       <span class="articles__date-label">Дата публикации</span>
@@ -55,6 +63,9 @@ export default {
     },
     imgUrl() {
       return this.item.image?.url || `/img/ozon.jpg`
+    },
+    imgAlternate() {
+      return this.item.image?.alternativeText || this.item.title
     },
   },
 }
@@ -130,6 +141,7 @@ export default {
     display: inline-block;
     margin-left: rem(24);
     margin-top: rem(2);
+    overflow: hidden;
   }
 
   &__title {

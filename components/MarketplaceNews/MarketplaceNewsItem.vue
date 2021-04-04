@@ -2,7 +2,16 @@
   <div class="news__item">
     <div v-if="itemDate || imgUrl" class="news__row news__photo">
       <div v-if="itemDate" class="news__date">{{ itemDate }}</div>
-      <img v-if="imgUrl" :src="imgUrl" alt="this.image.alternativeText" />
+      <nuxt-picture
+        v-if="imgUrl"
+        :src="imgUrl"
+        sizes="sm:360px"
+        format="webp"
+        :alt="item.image.alternativeText"
+        width="360"
+        height="230"
+        fit="cover"
+      ></nuxt-picture>
     </div>
     <div v-if="icons.length" class="news__row news__icons">
       <a

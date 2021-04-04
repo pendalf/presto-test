@@ -52,6 +52,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -249,5 +250,8 @@ export default {
   }),
   fontLoader: {
     url: '/fonts/GTEestiPro/GTEestiPro.css',
+  },
+  image: {
+    domains: ['http://cdn-stg.ozonru.me', 'https://cdn-stg.ozonru.me'],
   },
 }
