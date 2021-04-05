@@ -131,17 +131,6 @@ export default {
 </script>
 
 <style lang="scss">
-// .menu--processed {
-//   @media only screen and (min-width: 650px) {
-//     overflow: hidden;
-//     .menu {
-//       &__list {
-//         flex-wrap: nowrap;
-//         white-space: nowrap;
-//       }
-//     }
-//   }
-// }
 .menu--cloned {
   position: absolute;
   top: rem(-1000);

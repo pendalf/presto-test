@@ -105,8 +105,14 @@ export default {
 }
 .logo {
   // width: rem(82);
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  top: rem(2);
   @media only screen and (min-width: 650px) {
     width: rem(204);
+    top: rem(3);
+    padding-right: rem(15);
   }
   img {
     max-width: 100%;
@@ -140,6 +146,10 @@ export default {
   flex-grow: 1;
   justify-content: center;
 
+  @media only screen and (min-width: 650px) {
+    margin-left: rem(0);
+  }
+
   @media only screen and (min-width: 1200px) {
     margin-left: auto;
     margin-right: auto;
@@ -153,14 +163,15 @@ export default {
     line-height: rem(40);
     letter-spacing: rem(0.8);
     color: #ffffff;
-    margin: rem(16) 0;
+    margin: rem(16) 0 0;
 
     @media only screen and (min-width: 650px) {
       width: rem(536);
       margin-left: rem(108);
       font-size: rem(46);
-      line-height: rem(48);
+      line-height: rem(48.5);
       letter-spacing: rem(0.8);
+      margin-bottom: rem(16);
     }
     @media only screen and (min-width: 1200px) {
       width: rem(680);
@@ -176,14 +187,15 @@ export default {
     line-height: rem(20);
     letter-spacing: rem(0.4);
     color: #ffffff;
-    margin: rem(16) 0;
+    margin: rem(15) 0 rem(16);
 
     @media only screen and (min-width: 650px) {
       width: rem(536);
       margin-left: rem(108);
       font-size: rem(20);
-      line-height: rem(28);
+      line-height: rem(28.5);
       letter-spacing: rem(0.6);
+      margin-top: rem(16);
     }
     @media only screen and (min-width: 1200px) {
       width: rem(680);
@@ -230,7 +242,7 @@ export default {
   height: rem(40);
   background: #ffffff;
   border-radius: rem(1000);
-  margin: rem(0) rem(10);
+  margin: rem(0) rem(0) rem(0) rem(10);
 
   i {
     font-size: rem(20);
@@ -283,6 +295,7 @@ export default {
   margin-top: rem(48);
   @media only screen and (min-width: 650px) {
     margin-top: 0;
+    margin-left: rem(29);
   }
 }
 </style>

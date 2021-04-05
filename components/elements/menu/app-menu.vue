@@ -47,6 +47,10 @@ export default {
       letter-spacing: rem(0.4);
       margin-top: 0;
       position: relative;
+      margin-top: rem(2);
+    }
+    @media only screen and (min-width: 1200px) {
+      margin-top: rem(0);
     }
     a {
       color: $main-text-color;
@@ -97,6 +101,12 @@ export default {
           margin-top: rem(-6);
           margin-left: rem(11);
           font-size: rem(14);
+          @media only screen and (min-width: 650px) {
+            font-size: rem(12);
+          }
+          @media only screen and (min-width: 1200px) {
+            font-size: rem(14);
+          }
         }
       }
     }
