@@ -54,7 +54,7 @@ export default {
 
 <style lang="scss">
 .section--business-proposals {
-  margin-bottom: rem(36);
+  margin-bottom: rem(75);
 
   @media only screen and (min-width: 650px) {
     padding-top: rem(3);
