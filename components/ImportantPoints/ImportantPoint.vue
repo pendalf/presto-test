@@ -24,11 +24,10 @@ export default {
     display: flex !important;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: rem(37);
-    margin-bottom: rem(21);
+    margin-top: rem(28);
     padding: rem(24) rem(16) rem(40);
     width: rem(120);
-    min-height: rem(150);
+    min-height: rem(124);
     background: transparent;
 
     border-radius: rem(16);
@@ -37,6 +36,8 @@ export default {
     outline: none;
 
     @media only screen and (min-width: 650px) {
+      margin-top: rem(37);
+      margin-bottom: rem(21);
       margin-top: rem(47);
       padding: rem(24) rem(21) rem(40);
       min-height: rem(215);
