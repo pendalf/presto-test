@@ -59,7 +59,8 @@ export default {
 
 <style lang="scss">
 .section--articles-items {
-  margin-bottom: rem(18);
+  // margin-bottom: rem(18);
+  overflow: hidden;
   .slick-carousel {
     margin-top: rem(28);
     margin-bottom: rem(32);
@@ -69,6 +70,7 @@ export default {
       width: auto;
       margin-left: rem(-24);
       margin-top: rem(0);
+      margin-bottom: rem(-40);
     }
 
     .slick-slide {

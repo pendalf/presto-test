@@ -5,6 +5,7 @@
     <EventItems :items="events" :options="slickOptions" />
     <MarketplaceNews :items="news" :options="slickOptions" />
     <articles :items="articles" :options="slickOptions" />
+    <bigData></bigData>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import ImportantPoints from '~/components/ImportantPoints/ImportantPoints'
 import BusinessProposals from '~/components/BusinessProposals/BusinessProposals'
 import MarketplaceNews from '~/components/MarketplaceNews/MarketplaceNews'
 import articles from '~/components/articles/articles'
+import bigData from '~/components/bigData/bigData'
 
 export default {
   components: {
@@ -22,6 +24,7 @@ export default {
     BusinessProposals,
     MarketplaceNews,
     articles,
+    bigData,
   },
   async asyncData({ app, route, params, error, store, $axios }) {
     try {

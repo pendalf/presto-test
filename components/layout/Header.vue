@@ -207,6 +207,7 @@ export default {
     color: #ffffff;
     font-size: rem(14);
     visibility: hidden;
+    cursor: pointer;
 
     @media only screen and (min-width: 650px) {
       visibility: visible;
