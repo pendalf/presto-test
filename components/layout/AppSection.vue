@@ -71,6 +71,8 @@ export default {
 
   @media only screen and (min-width: 650px) {
     max-width: rem(1920);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__inner {

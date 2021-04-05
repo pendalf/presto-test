@@ -51,16 +51,32 @@ export default {
   margin-top: rem(36);
   @media only screen and (min-width: 650px) {
     padding-top: rem(41);
-    padding-bottom: rem(140);
+    padding-bottom: rem(135);
   }
   @media only screen and (min-width: 1200px) {
     padding-top: rem(80);
     border-radius: rem(60) rem(60) rem(0) rem(0);
-    padding-bottom: rem(108);
+    padding-bottom: rem(103);
   }
   .section {
+    &__title {
+      max-width: none;
+      @media only screen and (min-width: 650px) {
+        max-width: rem(350);
+      }
+      @media only screen and (min-width: 1200px) {
+        max-width: rem(550);
+      }
+    }
     &__subtitle {
-      margin-bottom: 0;
+      margin-bottom: rem(17);
+      @media only screen and (min-width: 650px) {
+        margin-bottom: 0;
+        max-width: rem(400);
+      }
+      @media only screen and (min-width: 1200px) {
+        max-width: rem(520);
+      }
     }
     &__footer {
       margin-top: rem(32);
@@ -81,6 +97,7 @@ export default {
     }
   }
   .accordion__trigger {
+    margin-top: rem(24);
     @media only screen and (min-width: 1200px) {
       margin-top: rem(32);
     }
@@ -121,16 +138,31 @@ export default {
       }
     }
   }
-  @media only screen and (min-width: 1200px) {
-    .section__content {
+
+  .section__content {
+    @media only screen and (min-width: 650px) {
       margin-left: rem(12);
     }
   }
   .accordion--prefooter {
+    @media only screen and (min-width: 650px) {
+      // padding-top: rem(16);
+    }
     @media only screen and (min-width: 1200px) {
       padding-top: rem(9);
     }
+    .accordion__item {
+      @media only screen and (min-width: 1200px) {
+        margin-right: rem(18);
+      }
+    }
     .accordion__trigger {
+      @media only screen and (min-width: 650px) {
+        padding-top: rem(16);
+      }
+      @media only screen and (min-width: 1200px) {
+        padding-top: 0;
+      }
       h3 {
         @media only screen and (min-width: 650px) {
           font-weight: normal;

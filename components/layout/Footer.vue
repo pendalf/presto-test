@@ -81,7 +81,7 @@ export default {
     @media only screen and (min-width: 650px) {
       flex-direction: row;
       padding-bottom: rem(60);
-      gap: rem(90);
+      gap: rem(118);
     }
     @media only screen and (min-width: 1200px) {
       gap: rem(198);
@@ -89,9 +89,9 @@ export default {
   }
 }
 .footer-block {
-  margin: rem(32) rem(16) 0;
+  margin: rem(32) rem(16) 0 0;
   @media only screen and (min-width: 650px) {
-    margin: rem(52) rem(28) 0;
+    margin: rem(52) rem(28) 0 0;
   }
 
   @media only screen and (min-width: 1200px) {
