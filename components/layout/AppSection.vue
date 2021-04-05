@@ -84,6 +84,7 @@ export default {
     line-height: rem(28);
     letter-spacing: rem(0.6);
     margin-bottom: rem(1);
+    max-width: rem(200);
 
     @media only screen and (min-width: 650px) {
       margin-top: rem(66);

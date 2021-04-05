@@ -189,7 +189,8 @@ export default {
     i {
       position: absolute;
       left: rem(-28);
-      font-size: rem(16);
+      top: rem(2);
+      font-size: rem(12);
     }
   }
   &__more {

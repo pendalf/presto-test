@@ -76,7 +76,7 @@ export default {
 
 <style lang="scss">
 .section--event-items {
-  margin-bottom: rem(16);
+  margin-bottom: rem(56);
 
   @media only screen and (min-width: 1200px) {
     margin-bottom: rem(105);
@@ -84,7 +84,7 @@ export default {
 
   .slick-carousel {
     margin-bottom: rem(36);
-    width: rem(260);
+    width: rem(276);
 
     @media only screen and (min-width: 650px) {
       width: auto;
@@ -100,10 +100,18 @@ export default {
   }
 
   .btn--more {
+    align-self: flex-start;
     @media only screen and (min-width: 650px) {
       order: -1;
       margin-bottom: rem(40);
-      align-self: flex-start;
+    }
+  }
+  .section__content {
+    @media only screen and (min-width: 650px) {
+      padding-top: rem(8);
+    }
+    @media only screen and (min-width: 650px) {
+      padding-top: 0;
     }
   }
 }
