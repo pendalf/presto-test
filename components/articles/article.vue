@@ -5,7 +5,6 @@
         <nuxt-picture
           v-if="imgUrl"
           :src="imgUrl"
-          sizes="sm:340px"
           format="webp"
           :alt="imgAlternate"
           width="240"
@@ -22,7 +21,7 @@
     </div>
     <div class="articles__row articles__title">{{ item.title }}</div>
     <div class="articles__row articles__excerpt">
-      {{ item.excerpt | truncate(100, '...') }}
+      {{ item.excerpt | truncate(300, '...') }}
     </div>
     <div v-if="link" class="articles__row articles__more">
       <nuxt-link :to="link">Читать статью</nuxt-link>
@@ -87,8 +86,7 @@ export default {
     outline: none;
 
     @media only screen and (min-width: 650px) {
-      padding-top: rem(24);
-      padding-bottom: rem(40);
+      padding: rem(24) rem(32) rem(40);
       border-radius: rem(20);
     }
     @media only screen and (min-width: 1200px) {

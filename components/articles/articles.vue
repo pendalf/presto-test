@@ -93,6 +93,7 @@ export default {
     }
   }
   .btn--more {
+    align-self: flex-start;
     @media only screen and (min-width: 650px) {
       order: -1;
       margin-bottom: rem(40);
