@@ -120,7 +120,10 @@ export default {
     }
   }
   &__subtitle + &__slider-title {
-    margin-top: rem(81);
+    margin-top: rem(52);
+    @media only screen and (min-width: 650px) {
+      margin-top: rem(81);
+    }
     @media only screen and (min-width: 1200px) {
       margin-top: rem(87);
     }

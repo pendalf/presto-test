@@ -101,10 +101,10 @@ export default {
 
 <style lang="scss">
 .section--news-items {
-  margin-bottom: rem(18);
+  margin-bottom: rem(8);
 
   @media only screen and (min-width: 1200px) {
-    margin-bottom: rem(72);
+    margin-bottom: rem(6);
   }
 
   .slick-carousel {
@@ -112,7 +112,7 @@ export default {
 
     margin-top: rem(28);
     margin-bottom: rem(32);
-    width: rem(220);
+    width: rem(244);
 
     @media only screen and (min-width: 650px) {
       width: auto;
@@ -126,6 +126,7 @@ export default {
     }
   }
   .btn--more {
+    align-self: flex-start;
     @media only screen and (min-width: 650px) {
       order: -1;
       margin-bottom: rem(40);
@@ -134,6 +135,12 @@ export default {
       margin-top: rem(-61);
     }
   }
+  .slick-list {
+    @media only screen and (min-width: 650px) {
+      margin-top: rem(-4);
+    }
+  }
+
   .slick-slide {
     &:first-child {
       .news {

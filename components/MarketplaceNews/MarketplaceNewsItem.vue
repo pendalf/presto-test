@@ -9,7 +9,7 @@
         format="webp"
         :alt="item.image.alternativeText"
         width="360"
-        height="230"
+        :height="picHeight"
         fit="cover"
       ></nuxt-picture>
     </div>
@@ -33,6 +33,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   props: {
     item: {
@@ -58,6 +60,10 @@ export default {
     icons() {
       return this.item.icons || false
     },
+    picHeight() {
+      return this.viewport === 'mobile' ? 304 : 230
+    },
+    ...mapState({ viewport: 'viewport' }),
   },
 }
 </script>

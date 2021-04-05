@@ -40,6 +40,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import navMenu from '~/components/elements/menu/nav-menu'
 export default {
   name: 'Header',
@@ -49,8 +51,10 @@ export default {
   data() {
     return {
       menuOpen: false,
-      viewport: 'mobile',
     }
+  },
+  computed: {
+    ...mapState({ viewport: 'viewport' }),
   },
   mounted() {
     window.addEventListener('resize', this.handleResize)
@@ -67,8 +71,7 @@ export default {
       this.menuOpen = false
     },
     handleResize() {
-      const documentWidth = document.documentElement.clientWidth
-      this.viewport = documentWidth > 649 ? 'tablet' : 'mobile'
+      this.$store.dispatch('setViewport')
     },
     scrollToHeaderBottom(e) {
       const header = e.target.closest('.header')
