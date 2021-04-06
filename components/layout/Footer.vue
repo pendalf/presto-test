@@ -78,23 +78,23 @@ export default {
     padding-top: rem(8);
     padding-bottom: rem(36);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       flex-direction: row;
       padding-bottom: rem(60);
       gap: rem(118);
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       gap: rem(198);
     }
   }
 }
 .footer-block {
   margin: rem(32) rem(16) 0 0;
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     margin: rem(52) rem(28) 0 0;
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: $desktop) {
     margin-left: 0;
   }
 
@@ -106,7 +106,7 @@ export default {
     line-height: rem(24);
     letter-spacing: rem(0.6);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       font-size: rem(20);
       line-height: rem(24.5);
     }
@@ -115,7 +115,7 @@ export default {
     margin: 0;
     padding: rem(8) 0 0;
     list-style: none;
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       padding-top: rem(9);
     }
   }
@@ -128,7 +128,7 @@ export default {
     line-height: rem(16);
     letter-spacing: rem(0.4);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       font-size: rem(16);
       line-height: rem(20.5);
       // margin: rem(10) 0 0;
@@ -160,7 +160,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        @media only screen and (min-width: 650px) {
+        @media only screen and (min-width: $tablet) {
           background: #15171f;
         }
         &:hover {

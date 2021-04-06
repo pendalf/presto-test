@@ -10,8 +10,8 @@
     <SlickCarousel v-if="items.length" :options="slickOptions">
       <EventItem v-for="(item, index) in items" :key="index" :event="item" />
     </SlickCarousel>
-    <appBtn :to="'/'" class="btn--more" type="button"
-      >Смотреть все мероприятия</appBtn
+    <app-btn :to="'/'" class="btn--more" type="button"
+      >Смотреть все мероприятия</app-btn
     >
   </AppSection>
 </template>
@@ -78,7 +78,7 @@ export default {
 .section--event-items {
   margin-bottom: rem(56);
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: $desktop) {
     margin-bottom: rem(105);
   }
 
@@ -86,14 +86,14 @@ export default {
     margin-bottom: rem(36);
     width: rem(276);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       width: auto;
       margin-left: rem(-24);
       margin-bottom: rem(15);
     }
 
     .slick-slide {
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         padding-left: rem(24);
       }
     }
@@ -101,16 +101,16 @@ export default {
 
   .btn--more {
     align-self: flex-start;
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       order: -1;
       margin-bottom: rem(40);
     }
   }
   .section__content {
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       padding-top: rem(8);
     }
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       padding-top: 0;
     }
   }

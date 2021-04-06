@@ -56,22 +56,22 @@ export default {
 .section--business-proposals {
   margin-bottom: rem(75);
 
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     padding-top: rem(3);
     margin-bottom: rem(121);
   }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: $desktop) {
     margin-bottom: rem(160);
   }
 }
 .accordion-props {
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     display: flex;
     align-items: flex-start;
     gap: rem(60);
     margin-top: rem(-5);
   }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: $desktop) {
     margin-top: rem(8);
   }
   &__col {

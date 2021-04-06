@@ -19,14 +19,14 @@ export default {
 
 <style lang="scss">
 .menu {
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     width: 100%;
   }
   &__list {
     padding: 0;
     margin: 0;
     list-style: none;
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       display: flex;
       flex-wrap: wrap;
       gap: rem(32);
@@ -39,7 +39,7 @@ export default {
     font-size: rem(16);
     line-height: rem(20);
     letter-spacing: rem(0.4);
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       font-weight: normal;
       font-size: rem(16);
       line-height: rem(20);
@@ -49,17 +49,17 @@ export default {
       position: relative;
       margin-top: rem(2);
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       margin-top: rem(0);
     }
     a {
       color: $main-text-color;
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         color: $basic-bg-color;
       }
     }
     .menu__list {
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         flex-direction: column;
         gap: rem(16);
         position: absolute;
@@ -101,10 +101,10 @@ export default {
           margin-top: rem(-6);
           margin-left: rem(11);
           font-size: rem(14);
-          @media only screen and (min-width: 650px) {
+          @media only screen and (min-width: $tablet) {
             font-size: rem(12);
           }
-          @media only screen and (min-width: 1200px) {
+          @media only screen and (min-width: $desktop) {
             font-size: rem(14);
           }
         }

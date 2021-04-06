@@ -9,7 +9,7 @@
       <template slot="section-subtitle">
         Хотите узнать о популярных поисковых pапросах?
       </template>
-      <appBtn :to="'/'" type="button">Хочу узнать</appBtn>
+      <app-btn :to="'/'" type="button">Хочу узнать</app-btn>
     </AppSection>
   </transition>
 </template>
@@ -39,11 +39,11 @@ export default {
   margin-top: rem(32);
   opacity: 1;
 
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     margin-top: rem(41);
     padding-bottom: rem(24);
   }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: $desktop) {
     margin-top: rem(80);
   }
 
@@ -58,7 +58,7 @@ export default {
       height: rem(208);
       box-sizing: border-box;
 
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         display: grid;
         grid-column-gap: rem(0);
         grid-row-gap: rem(0);
@@ -66,7 +66,7 @@ export default {
         padding: rem(24) rem(127) rem(24) rem(84);
         height: rem(168);
       }
-      @media only screen and (min-width: 1200px) {
+      @media only screen and (min-width: $desktop) {
         background-image: url('~assets/img/big-data-1920.jpg');
         padding-right: rem(85);
       }
@@ -79,7 +79,7 @@ export default {
       letter-spacing: rem(0.6);
       color: #ffffff;
 
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         font-size: rem(56);
         line-height: rem(60);
         letter-spacing: rem(0.8);
@@ -94,7 +94,7 @@ export default {
       letter-spacing: rem(0.4);
       color: #ffffff;
 
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         margin-top: rem(12);
         font-size: rem(20);
         line-height: rem(24.5);
@@ -104,7 +104,7 @@ export default {
       }
     }
     &__content {
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         grid-area: 1 / 2 / 3 / 3;
         display: flex;
         justify-content: center;
@@ -114,7 +114,7 @@ export default {
   .btn {
     align-self: flex-start;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       align-self: flex-end;
       margin-top: rem(-25);
     }
@@ -141,7 +141,7 @@ export default {
     box-sizing: border-box;
     cursor: pointer;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       right: rem(24);
     }
 
@@ -172,7 +172,7 @@ export default {
     margin-bottom: 0;
   }
 }
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: $tablet) {
   @keyframes hideBigData {
     from {
       opacity: 1;
@@ -191,7 +191,7 @@ export default {
     }
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: $desktop) {
   @keyframes hideBigData {
     from {
       opacity: 1;

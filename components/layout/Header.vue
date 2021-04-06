@@ -102,7 +102,7 @@ export default {
   min-height: 100vh;
   overflow: hidden;
 
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     border-radius: 0 0 rem(60) rem(60);
   }
 }
@@ -112,7 +112,7 @@ export default {
   display: inline-block;
   flex-shrink: 0;
   top: rem(2);
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     width: rem(204);
     top: rem(3);
     padding-right: rem(15);
@@ -133,11 +133,11 @@ export default {
   backdrop-filter: blur(rem(8));
   box-sizing: border-box;
 
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     height: rem(80);
     padding: rem(19) rem(28) rem(21);
   }
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     height: rem(80);
     padding: rem(19) rem(28) rem(21);
   }
@@ -149,11 +149,11 @@ export default {
   flex-grow: 1;
   justify-content: center;
 
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     margin-left: rem(0);
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: $desktop) {
     margin-left: auto;
     margin-right: auto;
     max-width: rem(1176);
@@ -168,7 +168,7 @@ export default {
     color: #ffffff;
     margin: rem(16) 0 0;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       width: rem(536);
       margin-left: rem(108);
       font-size: rem(46);
@@ -176,7 +176,7 @@ export default {
       letter-spacing: rem(0.8);
       margin-bottom: rem(16);
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       width: rem(680);
       margin-left: 0;
       font-weight: 500;
@@ -192,7 +192,7 @@ export default {
     color: #ffffff;
     margin: rem(15) 0 rem(16);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       width: rem(536);
       margin-left: rem(108);
       font-size: rem(20);
@@ -200,7 +200,7 @@ export default {
       letter-spacing: rem(0.6);
       margin-top: rem(16);
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       width: rem(680);
       margin-left: 0;
       margin-top: rem(15);
@@ -224,11 +224,11 @@ export default {
     visibility: hidden;
     cursor: pointer;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       visibility: visible;
     }
 
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       right: rem(148);
       bottom: rem(148);
     }
@@ -264,7 +264,7 @@ export default {
   z-index: 100;
   transform: translateX(100%);
   transition: 0.4s all;
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     transform: translateX(0);
     background: transparent;
     width: auto;
@@ -296,7 +296,7 @@ export default {
 .btn--login {
   display: block;
   margin-top: rem(48);
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     margin-top: 0;
     margin-left: rem(29);
   }

@@ -15,7 +15,7 @@
       </accordion-item>
     </accordion>
     <template slot="section-footer">
-      <appBtn :to="'/'" class="btn--white">Все вопросы-ответы</appBtn>
+      <app-btn :to="'/'" class="btn--white">Все вопросы-ответы</app-btn>
     </template>
   </AppSection>
 </template>
@@ -49,11 +49,11 @@ export default {
   color: #ffffff;
   padding-bottom: rem(40);
   margin-top: rem(36);
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     padding-top: rem(41);
     padding-bottom: rem(135);
   }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: $desktop) {
     padding-top: rem(80);
     border-radius: rem(60) rem(60) rem(0) rem(0);
     padding-bottom: rem(103);
@@ -61,20 +61,20 @@ export default {
   .section {
     &__title {
       max-width: none;
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         max-width: rem(350);
       }
-      @media only screen and (min-width: 1200px) {
+      @media only screen and (min-width: $desktop) {
         max-width: rem(550);
       }
     }
     &__subtitle {
       margin-bottom: rem(17);
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         margin-bottom: 0;
         max-width: rem(400);
       }
-      @media only screen and (min-width: 1200px) {
+      @media only screen and (min-width: $desktop) {
         max-width: rem(520);
       }
     }
@@ -85,7 +85,7 @@ export default {
       display: flex;
       flex-direction: column;
 
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows:
@@ -98,11 +98,11 @@ export default {
   }
   .accordion__trigger {
     margin-top: rem(24);
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       margin-top: rem(32);
     }
     h3 {
-      @media only screen and (min-width: 1200px) {
+      @media only screen and (min-width: $desktop) {
         font-weight: normal;
         font-size: rem(30);
         line-height: rem(36);
@@ -114,7 +114,7 @@ export default {
     }
   }
 
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     .section {
       &__title {
         grid-area: 1 / 1 / 2 / 2;
@@ -140,31 +140,31 @@ export default {
   }
 
   .section__content {
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       margin-left: rem(12);
     }
   }
   .accordion--prefooter {
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       // padding-top: rem(16);
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       padding-top: rem(9);
     }
     .accordion__item {
-      @media only screen and (min-width: 1200px) {
+      @media only screen and (min-width: $desktop) {
         margin-right: rem(18);
       }
     }
     .accordion__trigger {
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         padding-top: rem(16);
       }
-      @media only screen and (min-width: 1200px) {
+      @media only screen and (min-width: $desktop) {
         padding-top: 0;
       }
       h3 {
-        @media only screen and (min-width: 650px) {
+        @media only screen and (min-width: $tablet) {
           font-weight: normal;
           font-size: rem(30);
           line-height: rem(36);
@@ -173,11 +173,11 @@ export default {
       }
     }
     .accordion__content {
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         margin-top: rem(19);
         // margin-right: rem(50);
       }
-      @media only screen and (min-width: 1200px) {
+      @media only screen and (min-width: $desktop) {
         padding-bottom: rem(1);
       }
     }

@@ -55,7 +55,7 @@ export default {
     line-height: rem(20);
     letter-spacing: rem(0.4);
     border-radius: rem(1000);
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       padding: rem(10) rem(24);
     }
   }
@@ -74,7 +74,7 @@ export default {
     height: rem(36);
     border-radius: rem(1000);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       height: rem(48);
       padding: rem(14) rem(20);
       background: #edf3f9;

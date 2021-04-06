@@ -13,9 +13,9 @@
         :item="item"
       />
     </SlickCarousel>
-    <appBtn :to="'/'" class="btn--more" type="button"
+    <app-btn :to="'/'" class="btn--more" type="button"
       >Смотреть все новости
-    </appBtn>
+    </app-btn>
   </AppSection>
 </template>
 
@@ -103,7 +103,7 @@ export default {
 .section--news-items {
   margin-bottom: rem(8);
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: $desktop) {
     margin-bottom: rem(6);
   }
 
@@ -114,7 +114,7 @@ export default {
     margin-bottom: rem(32);
     width: rem(244);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       width: auto;
       margin-left: rem(-24);
       margin-top: 0;
@@ -127,7 +127,7 @@ export default {
   }
   .btn--more {
     align-self: flex-start;
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       order: -1;
       margin-bottom: rem(40);
       align-self: flex-end;
@@ -136,7 +136,7 @@ export default {
     }
   }
   .slick-list {
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       margin-top: rem(-4);
     }
   }
@@ -145,7 +145,7 @@ export default {
     &:first-child {
       .news {
         &____row {
-          @media only screen and (min-width: 650px) {
+          @media only screen and (min-width: $tablet) {
             margin-right: rem(32);
             margin-left: rem(32);
           }

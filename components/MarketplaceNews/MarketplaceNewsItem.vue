@@ -82,7 +82,7 @@ export default {
     border-radius: rem(16);
     overflow: hidden;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       width: rem(276) !important;
       min-height: rem(348);
       padding-bottom: rem(40);
@@ -91,7 +91,7 @@ export default {
   }
   &__row {
     margin: rem(16) rem(20) 0;
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       margin-right: rem(24);
       margin-left: rem(24);
     }
@@ -112,7 +112,7 @@ export default {
     line-height: rem(24);
     letter-spacing: rem(0.6);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       font-size: rem(20);
       line-height: rem(24.5);
     }

@@ -35,7 +35,7 @@ export default {
     transition: 0.45s all;
     outline: none;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       margin-top: rem(37);
       margin-bottom: rem(21);
       margin-top: rem(47);
@@ -56,7 +56,7 @@ export default {
         rem(-0.522018) rem(12.1488) rem(14.7936) rgba(0, 0, 0, 0.030688),
         rem(-0.116767) rem(2.71749) rem(6.4032) rgba(0, 0, 0, 0.019376);
 
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         margin-top: rem(21);
         padding: rem(41) rem(21) rem(49);
         box-shadow: rem(0) rem(47) rem(304) rgba(0, 26, 52, 0.04),
@@ -75,7 +75,7 @@ export default {
     line-height: rem(24);
     letter-spacing: rem(0.6);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       font-size: rem(36);
       line-height: rem(40);
       letter-spacing: rem(0.8);
@@ -88,13 +88,13 @@ export default {
     letter-spacing: rem(0.4);
     margin-top: rem(4);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       font-size: rem(16);
       line-height: rem(20.5);
       max-width: rem(160);
       //margin-top: rem(5);
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       margin-top: rem(3);
     }
   }

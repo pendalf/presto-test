@@ -37,13 +37,13 @@ export default {
 .section--important-point {
   .slick-carousel {
     width: rem(136);
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       width: auto;
       margin-left: rem(-24);
       margin-right: rem(-16);
     }
     .slick-slide {
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         padding-left: rem(24);
       }
     }
@@ -54,7 +54,7 @@ export default {
   }
 
   .section__slider-title {
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       margin-bottom: rem(24);
     }
   }

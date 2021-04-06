@@ -49,10 +49,10 @@ export default {
 
 <style lang="scss">
 html {
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     font-size: (16/992) * 100vw;
   }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: $desktop) {
     font-size: (16/1472) * 100vw;
   }
   @media only screen and (min-width: 1921px) {

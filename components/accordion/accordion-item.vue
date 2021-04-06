@@ -71,11 +71,11 @@ export default {
 
   margin-top: rem(32);
 
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     margin-top: rem(40);
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: $desktop) {
     margin-top: rem(28);
   }
 
@@ -87,7 +87,7 @@ export default {
     margin: 0;
     padding: 0;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       font-size: rem(24);
       line-height: rem(28.5);
     }
@@ -109,7 +109,7 @@ export default {
     border-radius: rem(100);
     box-sizing: border-box;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       width: rem(40);
       height: rem(40);
       padding: rem(12);
@@ -133,7 +133,7 @@ export default {
   line-height: rem(20);
   letter-spacing: rem(0.4);
 
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     margin-right: rem(60);
     margin-top: rem(4);
     margin-bottom: rem(0);

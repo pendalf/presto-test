@@ -4,7 +4,9 @@
     <SlickCarousel v-if="items.length" :options="slickOptions">
       <appArticle v-for="(item, index) in items" :key="index" :item="item" />
     </SlickCarousel>
-    <appBtn :to="'/'" class="btn--more" type="button">Читать все статьи</appBtn>
+    <app-btn :to="'/'" class="btn--more" type="button"
+      >Читать все статьи</app-btn
+    >
   </AppSection>
 </template>
 
@@ -66,7 +68,7 @@ export default {
     margin-bottom: rem(32);
     width: rem(236);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       width: auto;
       margin-left: rem(-24);
       margin-top: rem(0);
@@ -74,7 +76,7 @@ export default {
     }
 
     .slick-slide {
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         padding: 0 0 0 rem(24);
         flex-direction: column;
 
@@ -86,7 +88,7 @@ export default {
       }
     }
     .slick-track {
-      @media only screen and (min-width: 650px) {
+      @media only screen and (min-width: $tablet) {
         display: grid;
         grid-template-columns: repeat(100, 1fr);
       }
@@ -94,7 +96,7 @@ export default {
   }
   .btn--more {
     align-self: flex-start;
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       order: -1;
       margin-bottom: rem(40);
       align-self: flex-end;

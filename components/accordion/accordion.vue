@@ -28,7 +28,7 @@ export default {
   margin: 0;
   padding: 0;
 
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     //column-count: 2;
     //column-gap: rem(60);
   }

@@ -85,11 +85,11 @@ export default {
     background: transparent;
     outline: none;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       padding: rem(24) rem(32) rem(40);
       border-radius: rem(20);
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       padding: rem(16) rem(32) rem(32);
       display: grid !important;
       // grid-template-columns: rem(304) 1fr;
@@ -111,10 +111,10 @@ export default {
   &__row {
     margin: rem(16) rem(16) 0;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       margin: rem(16) rem(32) 0;
     }
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       margin-left: 0;
       margin-right: 0;
     }
@@ -126,7 +126,7 @@ export default {
       max-width: 100%;
       height: auto;
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       display: block;
       grid-area: 2 / 2 / 5 / 3;
       text-align: center;
@@ -148,7 +148,7 @@ export default {
     line-height: rem(24);
     letter-spacing: rem(0.6);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       // font-weight: normal;
       font-size: rem(24);
       line-height: rem(28);
@@ -159,13 +159,13 @@ export default {
     line-height: rem(20);
     letter-spacing: rem(0.4);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       line-height: rem(20.5);
     }
   }
 
   &__photo + &__date {
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       grid-area: 1 / 1 / 2 / 3;
     }
   }
@@ -178,11 +178,11 @@ export default {
     color: #667585;
     justify-content: space-between;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       line-height: rem(16.5);
     }
 
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       width: 100%;
       align-items: center;
       margin-bottom: rem(8);
@@ -191,7 +191,7 @@ export default {
 
   &__date-label {
     display: none;
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       font-weight: 350;
       display: block;
       font-size: rem(16);
@@ -201,7 +201,7 @@ export default {
   }
 
   &__date-content {
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       padding: rem(6) rem(12);
       background: #000912;
       font-size: rem(14);
@@ -223,9 +223,9 @@ export default {
 
     margin-top: auto;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       text-align: left;
     }
   }

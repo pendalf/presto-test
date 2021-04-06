@@ -77,7 +77,7 @@ export default {
     box-sizing: border-box;
     margin-bottom: rem(16);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       background: #edf3f9;
     }
 

@@ -69,7 +69,7 @@ export default {
     box-sizing: border-box;
     min-height: rem(396);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       width: rem(376) !important;
       padding: rem(32) rem(0);
       border-radius: rem(20);
@@ -85,7 +85,7 @@ export default {
   &__row {
     margin: 0 rem(16);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       margin: 0 rem(32);
     }
   }
@@ -98,7 +98,7 @@ export default {
     align-items: center;
     width: 100%;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       padding-left: rem(32);
     }
   }
@@ -108,7 +108,7 @@ export default {
     line-height: rem(16);
     letter-spacing: rem(0.4);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       font-size: rem(16);
       line-height: rem(21);
     }
@@ -125,12 +125,12 @@ export default {
     letter-spacing: rem(0.32);
     color: #ffffff;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       padding: rem(8) rem(12) rem(9);
       font-size: rem(14.5);
       letter-spacing: rem(0.4);
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       padding-bottom: rem(8);
     }
 
@@ -145,7 +145,7 @@ export default {
     letter-spacing: rem(0.6);
     margin-top: rem(16);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       margin-top: rem(25);
       font-size: rem(30);
       line-height: rem(36.5);
@@ -157,7 +157,7 @@ export default {
     line-height: rem(16);
     letter-spacing: rem(0.6);
     margin-top: rem(16);
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       margin-top: rem(20);
       font-size: rem(18);
       line-height: rem(24);
@@ -167,7 +167,7 @@ export default {
     padding: 0;
     margin-top: rem(4);
     list-style: none;
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       margin-top: rem(3);
     }
   }
@@ -180,7 +180,7 @@ export default {
     margin: rem(12) 0 0 rem(28);
     padding: 0;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       line-height: rem(16.5);
       margin: rem(12) 0 0 rem(28);
       padding-bottom: rem(4);
@@ -201,7 +201,7 @@ export default {
     padding-top: rem(32);
     margin-top: auto;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       font-size: rem(16);
       line-height: rem(20);
     }

@@ -54,12 +54,12 @@ export default {
   margin-left: rem(16);
   margin-right: rem(16);
 
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     margin-right: rem(28);
     margin-left: rem(28);
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: $desktop) {
     margin-right: auto;
     margin-left: auto;
     max-width: rem(1176);
@@ -69,7 +69,7 @@ export default {
   max-width: rem(320);
   margin: 0 auto;
 
-  @media only screen and (min-width: 650px) {
+  @media only screen and (min-width: $tablet) {
     max-width: rem(1920);
     margin-left: auto;
     margin-right: auto;
@@ -88,7 +88,7 @@ export default {
     margin-bottom: rem(1);
     max-width: rem(200);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       margin-top: rem(66);
       font-size: rem(46);
       line-height: rem(48.5);
@@ -96,7 +96,7 @@ export default {
       max-width: rem(350);
       margin-bottom: rem(23);
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       font-size: rem(72);
       line-height: rem(72);
       max-width: rem(550);
@@ -112,21 +112,21 @@ export default {
     line-height: rem(20);
     letter-spacing: rem(0.4);
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       margin-top: rem(0);
       max-width: rem(650);
       line-height: rem(20.5);
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       margin-bottom: rem(40);
     }
   }
   &__subtitle + &__slider-title {
     margin-top: rem(52);
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       margin-top: rem(81);
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       margin-top: rem(87);
     }
   }
@@ -138,13 +138,13 @@ export default {
     letter-spacing: rem(0.6);
     margin-bottom: 0;
 
-    @media only screen and (min-width: 650px) {
+    @media only screen and (min-width: $tablet) {
       margin-top: rem(66);
       margin-bottom: rem(25);
       font-size: rem(30);
       line-height: rem(36);
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $desktop) {
       margin-top: rem(67);
       margin-bottom: rem(17.5);
     }
